@@ -29,10 +29,10 @@ module key_decoder (
         4'b1011: keycode = 4'hC;
 
         // Fila 3: *, 0, #, D
-        4'b1100: keycode = 4'hX; // * → no tiene representación hex directa
+        4'b1100: keycode = 4'hE; // borrar
         4'b1101: keycode = 4'h0;
-        4'b1110: keycode = 4'hX; // # → ídem
-        4'b1111: keycode = 4'hD;
+        4'b1110: keycode = 4'hF; // sin uso
+        4'b1111: keycode = 4'hD; // toggle cociente/residuo
 
         default: keycode = 4'hF;
     endcase
