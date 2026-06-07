@@ -1,0 +1,994 @@
+$date
+	Sat Jun 06 19:52:54 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_division_array $end
+$var wire 4 ! R [3:0] $end
+$var wire 6 " Q [5:0] $end
+$var parameter 32 # NA $end
+$var parameter 32 $ NB $end
+$var reg 6 % A [5:0] $end
+$var reg 4 & B [3:0] $end
+$scope module dut $end
+$var wire 6 ' A [5:0] $end
+$var wire 4 ( B [3:0] $end
+$var wire 4 ) R [3:0] $end
+$var wire 6 * Q [5:0] $end
+$var wire 5 + B_inv [4:0] $end
+$var parameter 32 , NA $end
+$var parameter 32 - NB $end
+$scope begin gen_fila[0] $end
+$var wire 6 . c [5:0] $end
+$var wire 5 / R_ext [4:0] $end
+$var wire 5 0 D [4:0] $end
+$var parameter 2 1 row $end
+$scope begin gen_celda[0] $end
+$var parameter 2 2 j $end
+$scope module u_cell $end
+$var wire 1 3 b $end
+$var wire 1 4 cin $end
+$var wire 1 5 r $end
+$var wire 1 6 d $end
+$var wire 1 7 cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[1] $end
+$var parameter 2 8 j $end
+$scope module u_cell $end
+$var wire 1 9 b $end
+$var wire 1 : cin $end
+$var wire 1 ; r $end
+$var wire 1 < d $end
+$var wire 1 = cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[2] $end
+$var parameter 3 > j $end
+$scope module u_cell $end
+$var wire 1 ? b $end
+$var wire 1 @ cin $end
+$var wire 1 A r $end
+$var wire 1 B d $end
+$var wire 1 C cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[3] $end
+$var parameter 3 D j $end
+$scope module u_cell $end
+$var wire 1 E b $end
+$var wire 1 F cin $end
+$var wire 1 G r $end
+$var wire 1 H d $end
+$var wire 1 I cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[4] $end
+$var parameter 4 J j $end
+$scope module u_cell $end
+$var wire 1 K b $end
+$var wire 1 L cin $end
+$var wire 1 M r $end
+$var wire 1 N d $end
+$var wire 1 O cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[1] $end
+$var wire 6 P c [5:0] $end
+$var wire 5 Q R_ext [4:0] $end
+$var wire 5 R D [4:0] $end
+$var parameter 2 S row $end
+$scope begin gen_celda[0] $end
+$var parameter 2 T j $end
+$scope module u_cell $end
+$var wire 1 U b $end
+$var wire 1 V cin $end
+$var wire 1 W r $end
+$var wire 1 X d $end
+$var wire 1 Y cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[1] $end
+$var parameter 2 Z j $end
+$scope module u_cell $end
+$var wire 1 [ b $end
+$var wire 1 \ cin $end
+$var wire 1 ] r $end
+$var wire 1 ^ d $end
+$var wire 1 _ cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[2] $end
+$var parameter 3 ` j $end
+$scope module u_cell $end
+$var wire 1 a b $end
+$var wire 1 b cin $end
+$var wire 1 c r $end
+$var wire 1 d d $end
+$var wire 1 e cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[3] $end
+$var parameter 3 f j $end
+$scope module u_cell $end
+$var wire 1 g b $end
+$var wire 1 h cin $end
+$var wire 1 i r $end
+$var wire 1 j d $end
+$var wire 1 k cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[4] $end
+$var parameter 4 l j $end
+$scope module u_cell $end
+$var wire 1 m b $end
+$var wire 1 n cin $end
+$var wire 1 o r $end
+$var wire 1 p d $end
+$var wire 1 q cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[2] $end
+$var wire 6 r c [5:0] $end
+$var wire 5 s R_ext [4:0] $end
+$var wire 5 t D [4:0] $end
+$var parameter 3 u row $end
+$scope begin gen_celda[0] $end
+$var parameter 2 v j $end
+$scope module u_cell $end
+$var wire 1 w b $end
+$var wire 1 x cin $end
+$var wire 1 y r $end
+$var wire 1 z d $end
+$var wire 1 { cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[1] $end
+$var parameter 2 | j $end
+$scope module u_cell $end
+$var wire 1 } b $end
+$var wire 1 ~ cin $end
+$var wire 1 !" r $end
+$var wire 1 "" d $end
+$var wire 1 #" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[2] $end
+$var parameter 3 $" j $end
+$scope module u_cell $end
+$var wire 1 %" b $end
+$var wire 1 &" cin $end
+$var wire 1 '" r $end
+$var wire 1 (" d $end
+$var wire 1 )" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[3] $end
+$var parameter 3 *" j $end
+$scope module u_cell $end
+$var wire 1 +" b $end
+$var wire 1 ," cin $end
+$var wire 1 -" r $end
+$var wire 1 ." d $end
+$var wire 1 /" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[4] $end
+$var parameter 4 0" j $end
+$scope module u_cell $end
+$var wire 1 1" b $end
+$var wire 1 2" cin $end
+$var wire 1 3" r $end
+$var wire 1 4" d $end
+$var wire 1 5" cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[3] $end
+$var wire 6 6" c [5:0] $end
+$var wire 5 7" R_ext [4:0] $end
+$var wire 5 8" D [4:0] $end
+$var parameter 3 9" row $end
+$scope begin gen_celda[0] $end
+$var parameter 2 :" j $end
+$scope module u_cell $end
+$var wire 1 ;" b $end
+$var wire 1 <" cin $end
+$var wire 1 =" r $end
+$var wire 1 >" d $end
+$var wire 1 ?" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[1] $end
+$var parameter 2 @" j $end
+$scope module u_cell $end
+$var wire 1 A" b $end
+$var wire 1 B" cin $end
+$var wire 1 C" r $end
+$var wire 1 D" d $end
+$var wire 1 E" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[2] $end
+$var parameter 3 F" j $end
+$scope module u_cell $end
+$var wire 1 G" b $end
+$var wire 1 H" cin $end
+$var wire 1 I" r $end
+$var wire 1 J" d $end
+$var wire 1 K" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[3] $end
+$var parameter 3 L" j $end
+$scope module u_cell $end
+$var wire 1 M" b $end
+$var wire 1 N" cin $end
+$var wire 1 O" r $end
+$var wire 1 P" d $end
+$var wire 1 Q" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[4] $end
+$var parameter 4 R" j $end
+$scope module u_cell $end
+$var wire 1 S" b $end
+$var wire 1 T" cin $end
+$var wire 1 U" r $end
+$var wire 1 V" d $end
+$var wire 1 W" cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[4] $end
+$var wire 6 X" c [5:0] $end
+$var wire 5 Y" R_ext [4:0] $end
+$var wire 5 Z" D [4:0] $end
+$var parameter 4 [" row $end
+$scope begin gen_celda[0] $end
+$var parameter 2 \" j $end
+$scope module u_cell $end
+$var wire 1 ]" b $end
+$var wire 1 ^" cin $end
+$var wire 1 _" r $end
+$var wire 1 `" d $end
+$var wire 1 a" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[1] $end
+$var parameter 2 b" j $end
+$scope module u_cell $end
+$var wire 1 c" b $end
+$var wire 1 d" cin $end
+$var wire 1 e" r $end
+$var wire 1 f" d $end
+$var wire 1 g" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[2] $end
+$var parameter 3 h" j $end
+$scope module u_cell $end
+$var wire 1 i" b $end
+$var wire 1 j" cin $end
+$var wire 1 k" r $end
+$var wire 1 l" d $end
+$var wire 1 m" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[3] $end
+$var parameter 3 n" j $end
+$scope module u_cell $end
+$var wire 1 o" b $end
+$var wire 1 p" cin $end
+$var wire 1 q" r $end
+$var wire 1 r" d $end
+$var wire 1 s" cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[4] $end
+$var parameter 4 t" j $end
+$scope module u_cell $end
+$var wire 1 u" b $end
+$var wire 1 v" cin $end
+$var wire 1 w" r $end
+$var wire 1 x" d $end
+$var wire 1 y" cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[5] $end
+$var wire 6 z" c [5:0] $end
+$var wire 5 {" R_ext [4:0] $end
+$var wire 5 |" D [4:0] $end
+$var parameter 4 }" row $end
+$scope begin gen_celda[0] $end
+$var parameter 2 ~" j $end
+$scope module u_cell $end
+$var wire 1 !# b $end
+$var wire 1 "# cin $end
+$var wire 1 ## r $end
+$var wire 1 $# d $end
+$var wire 1 %# cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[1] $end
+$var parameter 2 &# j $end
+$scope module u_cell $end
+$var wire 1 '# b $end
+$var wire 1 (# cin $end
+$var wire 1 )# r $end
+$var wire 1 *# d $end
+$var wire 1 +# cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[2] $end
+$var parameter 3 ,# j $end
+$scope module u_cell $end
+$var wire 1 -# b $end
+$var wire 1 .# cin $end
+$var wire 1 /# r $end
+$var wire 1 0# d $end
+$var wire 1 1# cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[3] $end
+$var parameter 3 2# j $end
+$scope module u_cell $end
+$var wire 1 3# b $end
+$var wire 1 4# cin $end
+$var wire 1 5# r $end
+$var wire 1 6# d $end
+$var wire 1 7# cout $end
+$upscope $end
+$upscope $end
+$scope begin gen_celda[4] $end
+$var parameter 4 8# j $end
+$scope module u_cell $end
+$var wire 1 9# b $end
+$var wire 1 :# cin $end
+$var wire 1 ;# r $end
+$var wire 1 <# d $end
+$var wire 1 =# cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 8#
+b11 2#
+b10 ,#
+b1 &#
+b0 ~"
+b101 }"
+b100 t"
+b11 n"
+b10 h"
+b1 b"
+b0 \"
+b100 ["
+b100 R"
+b11 L"
+b10 F"
+b1 @"
+b0 :"
+b11 9"
+b100 0"
+b11 *"
+b10 $"
+b1 |
+b0 v
+b10 u
+b100 l
+b11 f
+b10 `
+b1 Z
+b0 T
+b1 S
+b100 J
+b11 D
+b10 >
+b1 8
+b0 2
+b0 1
+b100 -
+b110 ,
+b100 $
+b110 #
+$end
+#0
+$dumpvars
+0=#
+1<#
+0;#
+0:#
+19#
+07#
+16#
+05#
+04#
+13#
+01#
+10#
+0/#
+0.#
+1-#
+0+#
+0*#
+0)#
+0(#
+0'#
+0%#
+1$#
+0##
+1"#
+0!#
+b11101 |"
+b0 {"
+b1 z"
+0y"
+1x"
+0w"
+0v"
+1u"
+0s"
+1r"
+0q"
+0p"
+1o"
+0m"
+1l"
+0k"
+0j"
+1i"
+0g"
+0f"
+0e"
+0d"
+0c"
+0a"
+1`"
+0_"
+1^"
+0]"
+b11101 Z"
+b0 Y"
+b1 X"
+1W"
+0V"
+0U"
+1T"
+1S"
+1Q"
+0P"
+0O"
+1N"
+1M"
+1K"
+0J"
+0I"
+1H"
+1G"
+1E"
+0D"
+1C"
+1B"
+0A"
+1?"
+0>"
+1="
+1<"
+0;"
+b0 8"
+b11 7"
+b111111 6"
+05"
+14"
+03"
+02"
+11"
+0/"
+1."
+0-"
+0,"
+1+"
+0)"
+1("
+0'"
+0&"
+1%"
+0#"
+1""
+0!"
+1~
+0}
+1{
+0z
+1y
+1x
+0w
+b11110 t
+b1 s
+b11 r
+0q
+1p
+0o
+0n
+1m
+0k
+1j
+0i
+0h
+1g
+0e
+1d
+0c
+0b
+1a
+0_
+0^
+0]
+0\
+0[
+0Y
+1X
+0W
+1V
+0U
+b11101 R
+b0 Q
+b1 P
+0O
+1N
+0M
+0L
+1K
+0I
+1H
+0G
+0F
+1E
+0C
+1B
+0A
+0@
+1?
+0=
+0<
+0;
+0:
+09
+07
+16
+05
+14
+03
+b11101 0
+b0 /
+b1 .
+b11100 +
+b100 *
+b0 )
+b11 (
+b1100 '
+b11 &
+b1100 %
+b100 "
+b0 !
+$end
+#10000
+0x"
+14#
+1:#
+11#
+06#
+17#
+0<#
+1=#
+1y"
+0w"
+b11 "
+b11 *
+1/#
+05#
+0;#
+1p"
+1v"
+1V"
+0W"
+1m"
+0r"
+1s"
+0T"
+1e"
+1k"
+0q"
+1b
+1@
+1j"
+1.#
+1P"
+0Q"
+1_
+1=
+1g"
+1+#
+0N"
+1&"
+1\
+1:
+1)#
+1d"
+1(#
+00#
+b11 |"
+1*#
+0l"
+b11 Z"
+1f"
+1J"
+b111 6"
+0K"
+1D"
+b11111 8"
+1>"
+1("
+0""
+b111 r
+1#"
+b11101 t
+1z
+1d
+0^
+b11100 R
+0X
+b111 P
+1Y
+1B
+0<
+b11100 0
+06
+b111 .
+17
+b111111 X"
+1a"
+b11 !
+b11 )
+b111111 z"
+1%#
+0-#
+1'#
+1!#
+0i"
+1c"
+1]"
+0G"
+1A"
+1;"
+0%"
+1}
+1w
+0a
+1[
+1U
+0?
+19
+13
+1_"
+1##
+b11011 +
+b111 Y"
+b111 {"
+b100 &
+b100 (
+b1111 %
+b1111 '
+#20000
+0y"
+0v"
+05#
+0s"
+0H"
+1j"
+0p"
+0E"
+1P"
+1g"
+1l"
+b111 X"
+0m"
+0C"
+1e"
+0k"
+0;#
+b1001 "
+b1001 *
+0<#
+1=#
+1x"
+04"
+15"
+1V"
+0W"
+1:#
+0w"
+12"
+0T"
+06#
+17#
+0."
+1/"
+1r"
+0Q"
+1.#
+14#
+0O"
+1,"
+0q"
+0N"
+1+#
+00#
+b111111 z"
+11#
+1)"
+b11 Y"
+0J"
+b11 6"
+0K"
+1)#
+1/#
+1'"
+0I"
+b0 !
+b0 )
+b111 {"
+0("
+1d
+0B
+b1 7"
+1&"
+1b
+0@
+1]
+1!"
+0*#
+b0 |"
+0$#
+0f"
+b11100 Z"
+0`"
+1D"
+b11010 8"
+0>"
+0""
+b111111 r
+1#"
+b0 t
+0z
+b11100 R
+0^
+b111 P
+1_
+b11010 0
+1<
+b11 .
+0=
+b111 s
+0'#
+0!#
+0c"
+0]"
+0A"
+0;"
+0}
+0w
+0[
+0U
+09
+03
+15
+1W
+b11000 +
+b1 /
+b11 Q
+b111 &
+b111 (
+b111111 %
+b111111 '
+#30000
+0r"
+1v"
+1s"
+0p"
+1q"
+1l"
+0m"
+0/#
+15#
+0;#
+0k"
+1J"
+1V"
+1I"
+b100 Z"
+0x"
+b110111 X"
+1y"
+0W"
+0w"
+0T"
+0U"
+b11 "
+b11 *
+1P"
+b11 6"
+0Q"
+14"
+05"
+0<#
+1=#
+0O"
+02"
+1:#
+b101 7"
+1."
+0/"
+06#
+17#
+0,"
+04#
+b11100 t
+1("
+b111 r
+0)"
+0d
+b10 !
+b10 )
+00#
+01#
+0'"
+0b
+0.#
+1^
+b11 P
+0_
+b10 |"
+1*#
+b110011 z"
+0+#
+0]
+0)#
+b11111 8"
+1>"
+b11011 R
+1X
+b1 Q
+1!#
+1]"
+1;"
+1w
+1U
+13
+05
+0y
+0_"
+0##
+b11001 +
+b0 /
+b10 s
+b1010 Y"
+b1000 {"
+b110 &
+b110 (
+b10100 %
+b10100 '
+#40000
+0q"
+b10 Y"
+14#
+b0 "
+b0 *
+1/#
+05#
+0;#
+1h
+1F
+0I"
+1<#
+0=#
+11#
+1x"
+0y"
+1e
+1C
+b1 7"
+b101 !
+b101 )
+0:#
+1.#
+0v"
+1p"
+1N"
+1H"
+1,"
+1b
+1@
+0!"
+16#
+07#
+10#
+0*#
+b1111 z"
+1+#
+1r"
+0s"
+0l"
+b1111 X"
+1m"
+b11010 Z"
+1f"
+1P"
+0J"
+1K"
+b11001 8"
+0D"
+b1111 6"
+1E"
+1."
+0("
+b1111 r
+1)"
+b11000 t
+0""
+1j
+0d
+0^
+b1111 P
+1_
+1H
+0B
+b11000 0
+0<
+b1111 .
+1=
+b0 s
+b11000 R
+0X
+b11101 |"
+1$#
+03#
+1-#
+1'#
+0o"
+1i"
+1c"
+0M"
+1G"
+1A"
+0+"
+1%"
+1}
+0g
+1a
+1[
+0E
+1?
+19
+0W
+1##
+b10111 +
+b0 Q
+b101 {"
+b1000 &
+b1000 (
+b101 %
+b101 '
+#50000
