@@ -147,36 +147,30 @@ IO_PORT "rows[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
 // Lógica activo-bajo: an=0 enciende el dígito, an=1 lo apaga.
 // DRIVE=8 mA: suficiente para los transistores de manejo del display.
 
-IO_LOC  "an[0]" 72;
-IO_PORT "an[0]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
+// ── DISPLAY EXTERNO: Bank 1 (3.3 V) ──────────────────────────────
+IO_LOC  "an[0]" 35;
+IO_PORT "an[0]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
-IO_LOC  "an[1]" 73;
-IO_PORT "an[1]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "an[1]" 36;
+IO_PORT "an[1]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
+IO_LOC  "seg[0]" 37;
+IO_PORT "seg[0]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
-// ── 6. DISPLAY 7 SEGMENTOS — SEGMENTOS (Bank 6, 1.8 V) ─────────────
-// Compartidos entre todos los dígitos (multiplex por ánodo).
-// Lógica activo-bajo: seg=0 enciende el segmento, seg=1 lo apaga.
-// seg[0]=a (horizontal sup.), seg[1]=b, seg[2]=c, seg[3]=d (horiz. inf.),
-// seg[4]=e, seg[5]=f, seg[6]=g (segmento central).
+IO_LOC  "seg[1]" 38;
+IO_PORT "seg[1]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
-IO_LOC  "seg[0]" 81;
-IO_PORT "seg[0]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[2]" 39;
+IO_PORT "seg[2]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
-IO_LOC  "seg[1]" 82;
-IO_PORT "seg[1]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[3]" 40;
+IO_PORT "seg[3]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
-IO_LOC  "seg[2]" 83;
-IO_PORT "seg[2]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[4]" 41;
+IO_PORT "seg[4]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
-IO_LOC  "seg[3]" 84;
-IO_PORT "seg[3]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[5]" 42;
+IO_PORT "seg[5]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
 
-IO_LOC  "seg[4]" 85;
-IO_PORT "seg[4]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
-
-IO_LOC  "seg[5]" 70;
-IO_PORT "seg[5]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
-
-IO_LOC  "seg[6]" 71;
-IO_PORT "seg[6]" IO_TYPE=LVCMOS18 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[6]" 43;
+IO_PORT "seg[6]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
