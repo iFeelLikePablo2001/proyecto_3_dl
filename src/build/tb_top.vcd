@@ -1,0 +1,1128 @@
+$date
+	Sun Jun 07 20:57:30 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_top $end
+$var wire 7 ! seg [6:0] $end
+$var wire 4 " cols [3:0] $end
+$var wire 2 # an [1:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$var reg 4 & rows [3:0] $end
+$scope module dut $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var wire 4 ' rows [3:0] $end
+$var wire 1 ( rst_n $end
+$var wire 1 ) tecla_valida $end
+$var wire 1 * valid_div $end
+$var wire 1 + sel_display $end
+$var wire 7 , seg [6:0] $end
+$var wire 1 - scan_enable $end
+$var wire 4 . rows_sync [3:0] $end
+$var wire 4 / rows_clean [3:0] $end
+$var wire 2 0 row_detect [1:0] $end
+$var wire 4 1 residuo [3:0] $end
+$var wire 4 2 keycode [3:0] $end
+$var wire 1 3 key_valid_raw $end
+$var wire 1 4 done $end
+$var wire 10 5 divisor_raw [9:0] $end
+$var wire 4 6 divisor [3:0] $end
+$var wire 10 7 dividendo_raw [9:0] $end
+$var wire 6 8 dividendo [5:0] $end
+$var wire 1 9 display_enable $end
+$var wire 1 : disp_col $end
+$var wire 4 ; digit [3:0] $end
+$var wire 4 < cols [3:0] $end
+$var wire 2 = col_detect [1:0] $end
+$var wire 6 > cociente [5:0] $end
+$var wire 1 ? capturando_B $end
+$var wire 1 @ capturando_A $end
+$var wire 1 A borrar $end
+$var wire 8 B bcd_sel [7:0] $end
+$var wire 8 C bcd_residuo [7:0] $end
+$var wire 8 D bcd_cociente [7:0] $end
+$var wire 2 E an [1:0] $end
+$var wire 2 F active_display [1:0] $end
+$var reg 6 G cociente_r [5:0] $end
+$var reg 1 H key_active $end
+$var reg 4 I residuo_r [3:0] $end
+$scope begin gen_filas[0] $end
+$var parameter 2 J i $end
+$scope module u_deb $end
+$var wire 1 $ clk $end
+$var wire 1 K noisy_in $end
+$var wire 1 % reset $end
+$var parameter 32 L LIMIT $end
+$var reg 1 M clean_out $end
+$var reg 11 N counter [10:0] $end
+$var reg 1 O previous $end
+$upscope $end
+$scope module u_sync $end
+$var wire 1 P async_in $end
+$var wire 1 $ clk $end
+$var wire 1 Q sync_out $end
+$var reg 1 R ff1 $end
+$var reg 1 Q ff2 $end
+$upscope $end
+$upscope $end
+$scope begin gen_filas[1] $end
+$var parameter 2 S i $end
+$scope module u_deb $end
+$var wire 1 $ clk $end
+$var wire 1 T noisy_in $end
+$var wire 1 % reset $end
+$var parameter 32 U LIMIT $end
+$var reg 1 V clean_out $end
+$var reg 11 W counter [10:0] $end
+$var reg 1 X previous $end
+$upscope $end
+$scope module u_sync $end
+$var wire 1 Y async_in $end
+$var wire 1 $ clk $end
+$var wire 1 Z sync_out $end
+$var reg 1 [ ff1 $end
+$var reg 1 Z ff2 $end
+$upscope $end
+$upscope $end
+$scope begin gen_filas[2] $end
+$var parameter 3 \ i $end
+$scope module u_deb $end
+$var wire 1 $ clk $end
+$var wire 1 ] noisy_in $end
+$var wire 1 % reset $end
+$var parameter 32 ^ LIMIT $end
+$var reg 1 _ clean_out $end
+$var reg 11 ` counter [10:0] $end
+$var reg 1 a previous $end
+$upscope $end
+$scope module u_sync $end
+$var wire 1 b async_in $end
+$var wire 1 $ clk $end
+$var wire 1 c sync_out $end
+$var reg 1 d ff1 $end
+$var reg 1 c ff2 $end
+$upscope $end
+$upscope $end
+$scope begin gen_filas[3] $end
+$var parameter 3 e i $end
+$scope module u_deb $end
+$var wire 1 $ clk $end
+$var wire 1 f noisy_in $end
+$var wire 1 % reset $end
+$var parameter 32 g LIMIT $end
+$var reg 1 h clean_out $end
+$var reg 11 i counter [10:0] $end
+$var reg 1 j previous $end
+$upscope $end
+$scope module u_sync $end
+$var wire 1 k async_in $end
+$var wire 1 $ clk $end
+$var wire 1 l sync_out $end
+$var reg 1 m ff1 $end
+$var reg 1 l ff2 $end
+$upscope $end
+$upscope $end
+$scope module u_bcd_q $end
+$var wire 6 n bin_in [5:0] $end
+$var parameter 32 o BIN_W $end
+$var parameter 32 p N_DIGITS $end
+$var parameter 32 q TOTAL_W $end
+$var reg 8 r bcd_out [7:0] $end
+$var reg 14 s scratch [13:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 t i [31:0] $end
+$scope begin $ivl_for_loop1 $end
+$var integer 32 u j [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module u_bcd_r $end
+$var wire 4 v bin_in [3:0] $end
+$var parameter 32 w BIN_W $end
+$var parameter 32 x N_DIGITS $end
+$var parameter 32 y TOTAL_W $end
+$var reg 8 z bcd_out [7:0] $end
+$var reg 12 { scratch [11:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 | i [31:0] $end
+$scope begin $ivl_for_loop1 $end
+$var integer 32 } j [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module u_capA $end
+$var wire 1 $ clk $end
+$var wire 1 ( rst_n $end
+$var wire 1 ) tecla_valida $end
+$var wire 4 ~ tecla [3:0] $end
+$var wire 10 !" numero_bcd [9:0] $end
+$var wire 1 @ habilitado $end
+$var wire 1 A borrar $end
+$var parameter 32 "" MAX_DIGITOS $end
+$var reg 2 #" idx [1:0] $end
+$var reg 1 $" listo $end
+$upscope $end
+$scope module u_capB $end
+$var wire 1 $ clk $end
+$var wire 1 ( rst_n $end
+$var wire 1 ) tecla_valida $end
+$var wire 4 %" tecla [3:0] $end
+$var wire 10 &" numero_bcd [9:0] $end
+$var wire 1 ? habilitado $end
+$var wire 1 A borrar $end
+$var parameter 32 '" MAX_DIGITOS $end
+$var reg 2 (" idx [1:0] $end
+$var reg 1 )" listo $end
+$upscope $end
+$scope module u_decoder $end
+$var wire 2 *" key_row [1:0] $end
+$var wire 2 +" key_col [1:0] $end
+$var reg 4 ," keycode [3:0] $end
+$upscope $end
+$scope module u_disp_ce $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var parameter 32 -" MAX_COUNT $end
+$var reg 15 ." counter [14:0] $end
+$var reg 1 9 enable $end
+$upscope $end
+$scope module u_div $end
+$var wire 6 /" A [5:0] $end
+$var wire 4 0" B [3:0] $end
+$var wire 6 1" Q [5:0] $end
+$var wire 4 2" R [3:0] $end
+$var wire 1 $ clk $end
+$var wire 1 4 done $end
+$var wire 1 ( rst_n $end
+$var wire 1 * valid $end
+$var parameter 32 3" NA $end
+$var parameter 32 4" NB $end
+$scope begin gen_fila[0] $end
+$var wire 6 5" q_prev [5:0] $end
+$var wire 4 6" r_prev [3:0] $end
+$var wire 6 7" sub [5:0] $end
+$var wire 5 8" r_ext [4:0] $end
+$var wire 1 9" q_bit $end
+$var parameter 2 :" k $end
+$scope begin g_entrada_primera $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[1] $end
+$var wire 4 ;" r_prev [3:0] $end
+$var wire 6 <" sub [5:0] $end
+$var wire 5 =" r_ext [4:0] $end
+$var wire 6 >" q_prev [5:0] $end
+$var wire 1 ?" q_bit $end
+$var parameter 2 @" k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[2] $end
+$var wire 4 A" r_prev [3:0] $end
+$var wire 6 B" sub [5:0] $end
+$var wire 5 C" r_ext [4:0] $end
+$var wire 6 D" q_prev [5:0] $end
+$var wire 1 E" q_bit $end
+$var parameter 3 F" k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[3] $end
+$var wire 4 G" r_prev [3:0] $end
+$var wire 6 H" sub [5:0] $end
+$var wire 5 I" r_ext [4:0] $end
+$var wire 6 J" q_prev [5:0] $end
+$var wire 1 K" q_bit $end
+$var parameter 3 L" k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[4] $end
+$var wire 4 M" r_prev [3:0] $end
+$var wire 6 N" sub [5:0] $end
+$var wire 5 O" r_ext [4:0] $end
+$var wire 6 P" q_prev [5:0] $end
+$var wire 1 Q" q_bit $end
+$var parameter 4 R" k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[5] $end
+$var wire 4 S" r_prev [3:0] $end
+$var wire 6 T" sub [5:0] $end
+$var wire 5 U" r_ext [4:0] $end
+$var wire 6 V" q_prev [5:0] $end
+$var wire 1 W" q_bit $end
+$var parameter 4 X" k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module u_fsm $end
+$var wire 1 A borrar $end
+$var wire 1 $ clk $end
+$var wire 1 4 done $end
+$var wire 1 Y" key_clr $end
+$var wire 1 ( rst_n $end
+$var wire 4 Z" tecla [3:0] $end
+$var wire 1 ) tecla_valida $end
+$var wire 1 * valid $end
+$var wire 1 ? capturando_B $end
+$var wire 1 @ capturando_A $end
+$var parameter 4 [" KEY_CLR $end
+$var parameter 4 \" KEY_EXEC $end
+$var parameter 4 ]" KEY_SEP $end
+$var parameter 4 ^" KEY_STAR $end
+$var parameter 4 _" KEY_TOG $end
+$var reg 2 `" next_state [1:0] $end
+$var reg 1 + sel_display $end
+$var reg 2 a" state [1:0] $end
+$upscope $end
+$scope module u_keypad $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var wire 4 b" rows [3:0] $end
+$var wire 1 - scan_enable $end
+$var reg 2 c" col_detect [1:0] $end
+$var reg 4 d" cols [3:0] $end
+$var reg 2 e" current_col [1:0] $end
+$var reg 1 3 key_valid $end
+$var reg 2 f" row_detect [1:0] $end
+$upscope $end
+$scope module u_mux $end
+$var wire 1 $ clk $end
+$var wire 1 9 display_enable $end
+$var wire 1 % reset $end
+$var reg 2 g" active_display [1:0] $end
+$upscope $end
+$scope module u_scan_ce $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var parameter 32 h" MAX_COUNT $end
+$var reg 16 i" counter [15:0] $end
+$var reg 1 - enable $end
+$upscope $end
+$scope module u_seg $end
+$var wire 4 j" number [3:0] $end
+$var reg 7 k" seg [6:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b110100101111000 h"
+b1101 _"
+b1110 ^"
+b1010 ]"
+b1011 \"
+b1100 ["
+b101 X"
+b100 R"
+b11 L"
+b10 F"
+b1 @"
+b0 :"
+b100 4"
+b110 3"
+b11010010111100 -"
+b10 '"
+b10 ""
+b1100 y
+b10 x
+b100 w
+b1110 q
+b10 p
+b110 o
+b1111101000 g
+b11 e
+b1111101000 ^
+b10 \
+b1111101000 U
+b1 S
+b1111101000 L
+b0 J
+$end
+#0
+$dumpvars
+b1000000 k"
+b0 j"
+b0 i"
+b0 g"
+bx f"
+b0 e"
+b1110 d"
+bx c"
+b0 b"
+b0 a"
+b0 `"
+b1111 Z"
+0Y"
+1W"
+b0 V"
+b0 U"
+b100000 T"
+b0 S"
+1Q"
+b0 P"
+b0 O"
+b100000 N"
+b0 M"
+1K"
+b0 J"
+b0 I"
+b100000 H"
+b0 G"
+1E"
+b0 D"
+b0 C"
+b100000 B"
+b0 A"
+1?"
+b0 >"
+b0 ="
+b100000 <"
+b0 ;"
+19"
+b0 8"
+b100000 7"
+b0 6"
+b0 5"
+b0 2"
+b0 1"
+b0 0"
+b0 /"
+b0 ."
+b1111 ,"
+bx +"
+bx *"
+0)"
+b0 ("
+b0 &"
+b1111 %"
+0$"
+b0 #"
+b0 !"
+b1111 ~
+b10 }
+b100 |
+b0 {
+b0 z
+b0 v
+b10 u
+b110 t
+b0 s
+b0 r
+b0 n
+xm
+xl
+0k
+0j
+b0 i
+0h
+xf
+xd
+xc
+0b
+0a
+b0 `
+0_
+x]
+x[
+xZ
+0Y
+0X
+b0 W
+0V
+xT
+xR
+xQ
+0P
+0O
+b0 N
+0M
+xK
+b0 I
+0H
+b0 G
+b0 F
+b10 E
+b0 D
+b0 C
+b0 B
+0A
+1@
+0?
+b0 >
+bx =
+b1110 <
+b0 ;
+0:
+09
+b0 8
+b0 7
+b0 6
+b0 5
+04
+03
+b1111 2
+b0 1
+bx 0
+b0 /
+bx .
+0-
+b1000000 ,
+0+
+0*
+0)
+0(
+b0 '
+b0 &
+1%
+0$
+b10 #
+b1110 "
+b1000000 !
+$end
+#18518
+0R
+0[
+0d
+0m
+1$
+#37036
+0$
+#55554
+0f
+0]
+0T
+0K
+0l
+0c
+0Z
+b0 .
+0Q
+1$
+#74072
+0$
+#92590
+1$
+#111108
+0$
+#129626
+1$
+#148144
+0$
+#166662
+1$
+#185180
+0$
+#200000
+1(
+1*
+b11 6
+b11 0"
+b1100 8
+b1100 /"
+0%
+#203698
+09"
+b11101 7"
+b1 N
+b1 W
+b1 `
+b1 i
+b1 i"
+b1 ."
+b1 >"
+b1 D"
+b1 J"
+b1 P"
+b1 V"
+b1 >
+b1 1"
+0*
+1$
+#222216
+0$
+#240734
+0?"
+b11101 <"
+b10 ."
+b10 i"
+b10 i
+b10 `
+b10 W
+b10 N
+b11 >
+b11 1"
+b11 V"
+b11 P"
+b11 J"
+b11 D"
+b0 >"
+1$
+#259252
+0$
+#277770
+0E"
+b11110 B"
+b1 C"
+b11 N
+b11 W
+b11 `
+b11 i
+b11 i"
+b11 ."
+b0 D"
+b111 J"
+b111 P"
+b111 V"
+b111 >
+b111 1"
+1$
+#296288
+0$
+#314806
+b100 ."
+b100 i"
+b100 i
+b100 `
+b100 W
+b100 N
+b1111 >
+b1111 1"
+b1111 V"
+b1111 P"
+b0 J"
+b100000 H"
+b11 I"
+b1 G"
+1$
+#333324
+0$
+#351842
+0Q"
+b11101 N"
+b101 N
+b101 W
+b101 `
+b101 i
+b101 i"
+b101 ."
+b1 P"
+b11111 V"
+b11111 >
+b11111 1"
+1$
+#370360
+0$
+#388878
+0W"
+b11101 T"
+b110 ."
+b110 i"
+b110 i
+b110 `
+b110 W
+b110 N
+b111111 >
+b111111 1"
+b10 V"
+1$
+#407396
+0$
+#425914
+b111 N
+b111 W
+b111 `
+b111 i
+b111 i"
+b111 ."
+14
+b100 >
+b100 1"
+1$
+#444432
+0$
+#462950
+b100 B
+b100 D
+b100 r
+b10 u
+b110 t
+b100000000 s
+b1000 ."
+b1000 i"
+b1000 i
+b1000 `
+b1000 W
+b1000 N
+b100 G
+b100 n
+04
+1$
+#481468
+0$
+#499986
+b1001 N
+b1001 W
+b1001 `
+b1001 i
+b1001 i"
+b1001 ."
+1$
+#518504
+0$
+#537022
+b1010 ."
+b1010 i"
+b1010 i
+b1010 `
+b1010 W
+b1010 N
+1$
+#555540
+0$
+#574058
+b1011 N
+b1011 W
+b1011 `
+b1011 i
+b1011 i"
+b1011 ."
+1*
+b100 6
+b100 0"
+b1111 8
+b1111 /"
+1$
+#592576
+0$
+#611094
+b11100 7"
+b1100 ."
+b1100 i"
+b1100 i
+b1100 `
+b1100 W
+b1100 N
+0*
+1$
+#629612
+0$
+#648130
+b11100 <"
+b1101 N
+b1101 W
+b1101 `
+b1101 i
+b1101 i"
+b1101 ."
+1$
+#666648
+0$
+#685166
+b11101 B"
+b1110 ."
+b1110 i"
+b1110 i
+b1110 `
+b1110 W
+b1110 N
+1$
+#703684
+0$
+#722202
+0K"
+b11111 H"
+b1111 N
+b1111 W
+b1111 `
+b1111 i
+b1111 i"
+b1111 ."
+1$
+#740720
+0$
+#759238
+1Q"
+b10000 ."
+b10000 i"
+b10000 i
+b10000 `
+b10000 W
+b10000 N
+b0 P"
+b100011 N"
+b111 O"
+b11 M"
+1$
+#777756
+0$
+#796274
+1W"
+b10001 N
+b10001 W
+b10001 `
+b10001 i
+b10001 i"
+b10001 ."
+b1 V"
+b100011 T"
+b111 U"
+b11 S"
+1$
+#814792
+0$
+#833310
+b10010 ."
+b10010 i"
+b10010 i
+b10010 `
+b10010 W
+b10010 N
+14
+b11 >
+b11 1"
+b11 1
+b11 2"
+1$
+#851828
+0$
+#870346
+b11 B
+b11 C
+b11 z
+b10 }
+b100 |
+b110000 {
+b11 D
+b11 r
+b10 u
+b110 t
+b11000000 s
+b10011 N
+b10011 W
+b10011 `
+b10011 i
+b10011 i"
+b10011 ."
+04
+b11 I
+b11 v
+b11 G
+b11 n
+1$
+#888864
+0$
+#907382
+b10100 ."
+b10100 i"
+b10100 i
+b10100 `
+b10100 W
+b10100 N
+1$
+#925900
+0$
+#944418
+b10101 N
+b10101 W
+b10101 `
+b10101 i
+b10101 i"
+b10101 ."
+1$
+#962936
+0$
+#981454
+b10110 ."
+b10110 i"
+b10110 i
+b10110 `
+b10110 W
+b10110 N
+0*
+b0 6
+b0 0"
+b0 8
+b0 /"
+1$
+#999972
+0$
+#1018490
+b10111 N
+b10111 W
+b10111 `
+b10111 i
+b10111 i"
+b10111 ."
+1$
+#1037008
+0$
+#1055526
+b11000 ."
+b11000 i"
+b11000 i
+b11000 `
+b11000 W
+b11000 N
+1$
+#1074044
+0$
+#1092562
+b11001 N
+b11001 W
+b11001 `
+b11001 i
+b11001 i"
+b11001 ."
+1$
+#1111080
+0$
+#1129598
+b11010 ."
+b11010 i"
+b11010 i
+b11010 `
+b11010 W
+b11010 N
+1$
+#1148116
+0$
+#1166634
+b11011 N
+b11011 W
+b11011 `
+b11011 i
+b11011 i"
+b11011 ."
+1$
+#1185152
+0$
+#1203670
+b11100 ."
+b11100 i"
+b11100 i
+b11100 `
+b11100 W
+b11100 N
+1$
+#1222188
+0$
+#1240706
+b11101 N
+b11101 W
+b11101 `
+b11101 i
+b11101 i"
+b11101 ."
+1$
+#1259224
+0$
+#1277742
+b11110 ."
+b11110 i"
+b11110 i
+b11110 `
+b11110 W
+b11110 N
+1$
+#1296260
+0$
+#1314778
+b11111 N
+b11111 W
+b11111 `
+b11111 i
+b11111 i"
+b11111 ."
+1$
+#1333296
+0$
+#1351814
+b100000 ."
+b100000 i"
+b100000 i
+b100000 `
+b100000 W
+b100000 N
+1$
+#1370332
+0$
+#1388850
+b100001 N
+b100001 W
+b100001 `
+b100001 i
+b100001 i"
+b100001 ."
+1$
+#1407368
+0$
+#1425886
+b100010 ."
+b100010 i"
+b100010 i
+b100010 `
+b100010 W
+b100010 N
+1$
+#1444404
+0$
+#1462922
+b100011 N
+b100011 W
+b100011 `
+b100011 i
+b100011 i"
+b100011 ."
+1$
+#1481440
+0$
+#1499958
+b100100 ."
+b100100 i"
+b100100 i
+b100100 `
+b100100 W
+b100100 N
+1$
+#1518476
+0$
+#1536994
+b100101 N
+b100101 W
+b100101 `
+b100101 i
+b100101 i"
+b100101 ."
+1$
+#1555512
+0$
+#1574030
+b100110 ."
+b100110 i"
+b100110 i
+b100110 `
+b100110 W
+b100110 N
+1$
+#1592548
+0$
+#1611066
+b100111 N
+b100111 W
+b100111 `
+b100111 i
+b100111 i"
+b100111 ."
+1$
+#1629584
+0$
+#1648102
+b101000 ."
+b101000 i"
+b101000 i
+b101000 `
+b101000 W
+b101000 N
+1$
+#1666620
+0$
+#1685138
+b101001 N
+b101001 W
+b101001 `
+b101001 i
+b101001 i"
+b101001 ."
+1$
+#1703656
+0$
+#1722174
+b101010 ."
+b101010 i"
+b101010 i
+b101010 `
+b101010 W
+b101010 N
+1$
+#1740692
+0$
+#1759210
+b101011 N
+b101011 W
+b101011 `
+b101011 i
+b101011 i"
+b101011 ."
+1$
+#1777728
+0$
+#1796246
+b101100 ."
+b101100 i"
+b101100 i
+b101100 `
+b101100 W
+b101100 N
+1$
+#1814764
+0$
+#1833282
+b101101 N
+b101101 W
+b101101 `
+b101101 i
+b101101 i"
+b101101 ."
+1$
+#1851800
+0$
+#1870318
+b101110 ."
+b101110 i"
+b101110 i
+b101110 `
+b101110 W
+b101110 N
+1$
+#1888836
+0$
+#1907354
+b101111 N
+b101111 W
+b101111 `
+b101111 i
+b101111 i"
+b101111 ."
+1$
+#1925872
+0$
+#1944390
+b110000 ."
+b110000 i"
+b110000 i
+b110000 `
+b110000 W
+b110000 N
+1$
+#1962908
+0$
+#1981426
+b110001 N
+b110001 W
+b110001 `
+b110001 i
+b110001 i"
+b110001 ."
+1$
+#1981454

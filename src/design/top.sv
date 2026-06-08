@@ -65,10 +65,20 @@ module top (
     // Salidas de los capturadores
     logic [5:0] dividendo;         // 6 bits, máx 63
     logic [3:0] divisor;           // 4 bits, máx 15
+    logic [9:0] dividendo_raw;     // salida cruda del capturador (10 bits BCD)
+    logic [9:0] divisor_raw;       // salida cruda del capturador (10 bits BCD)
 
-    // Salidas del division_unit
+    // Salidas del division_unit (cableadas directamente desde los registros del pipeline)
     logic [5:0] cociente;
     logic [3:0] residuo;
+
+    // Latches de salida: capturan cociente y residuo cuando done=1 y los mantienen
+    // estables hasta la próxima operación.
+    // NECESARIO con el pipeline: tras done, los registros q_p[NA]/r_p[NA] se
+    // sobreescriben en el siguiente ciclo con la burbuja inválida que sigue al dato.
+    // Sin estos latches el display mostraría basura a partir del segundo ciclo.
+    logic [5:0] cociente_r;
+    logic [3:0] residuo_r;
 
     // BCD del cociente y del residuo
     logic [7:0] bcd_cociente;      // [7:4]=decenas, [3:0]=unidades
@@ -184,34 +194,30 @@ module top (
     // ─────────────────────────────────────────────────────────────────
 
     // Dividendo A: máx 63 → 6 bits
-    capturador_numero #(
-        .MAX_DIGITOS(2),
-        .OUT_WIDTH  (6)
-    ) u_capA (
+    capturador_numero u_capA (
         .clk         (clk),
         .rst_n       (rst_n),
         .habilitado  (capturando_A),
         .tecla_valida(tecla_valida),
         .tecla       (keycode),
         .borrar      (borrar),
-        .numero_bin  (dividendo),
+        .numero_bcd  (dividendo_raw),
         .listo       ()
     );
+    assign dividendo = dividendo_raw[5:0];
 
     // Divisor B: máx 15 → 4 bits
-    capturador_numero #(
-        .MAX_DIGITOS(2),
-        .OUT_WIDTH  (4)
-    ) u_capB (
+    capturador_numero u_capB (
         .clk         (clk),
         .rst_n       (rst_n),
         .habilitado  (capturando_B),
         .tecla_valida(tecla_valida),
         .tecla       (keycode),
         .borrar      (borrar),
-        .numero_bin  (divisor),
+        .numero_bcd  (divisor_raw),
         .listo       ()
     );
+    assign divisor = divisor_raw[3:0];
 
     // ─────────────────────────────────────────────────────────────────
     // 8. Unidad de división de enteros
@@ -231,20 +237,40 @@ module top (
     );
 
     // ─────────────────────────────────────────────────────────────────
-    // 9. Conversores binario → BCD (para display)
+    // 9. Latch de salida del divisor
+    // Captura Q y R en el ciclo en que done=1 y los retiene estables.
+    // Timing: done=v_p[NA] es una salida registrada del pipeline; cociente
+    // y residuo son también registrados (q_p[NA], r_p[NA]). Todos se leen
+    // ANTES del flanco activo, por lo que el latch captura los valores
+    // correctos del mismo ciclo en que done=1 aparece.
+    // ─────────────────────────────────────────────────────────────────
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            cociente_r <= '0;
+            residuo_r  <= '0;
+        end else if (done) begin
+            cociente_r <= cociente;
+            residuo_r  <= residuo;
+        end
+    end
+
+    // ─────────────────────────────────────────────────────────────────
+    // 10. Conversores binario → BCD (para display)
+    // Usan cociente_r / residuo_r (latched, estables) — NO las salidas
+    // directas del pipeline que se sobreescriben tras done.
     // ─────────────────────────────────────────────────────────────────
     bin_to_bcd #(.BIN_W(6), .N_DIGITS(2)) u_bcd_q (
-        .bin_in (cociente),
+        .bin_in (cociente_r),
         .bcd_out(bcd_cociente)
     );
 
     bin_to_bcd #(.BIN_W(4), .N_DIGITS(2)) u_bcd_r (
-        .bin_in (residuo),
+        .bin_in (residuo_r),
         .bcd_out(bcd_residuo)
     );
 
     // ─────────────────────────────────────────────────────────────────
-    // 10. Multiplexor de display: avanza entre los 2 ánodos físicos
+    // 11. Multiplexor de display: avanza entre los 2 ánodos físicos
     // ─────────────────────────────────────────────────────────────────
     mux_display u_mux (
         .clk           (clk),

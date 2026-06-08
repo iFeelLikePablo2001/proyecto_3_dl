@@ -1,0 +1,339 @@
+$date
+	Sat Jun 06 21:24:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_division_unit $end
+$var wire 1 ! done $end
+$var wire 4 " R [3:0] $end
+$var wire 6 # Q [5:0] $end
+$var parameter 32 $ NA $end
+$var parameter 32 % NB $end
+$var reg 6 & A [5:0] $end
+$var reg 4 ' B [3:0] $end
+$var reg 1 ( clk $end
+$var reg 1 ) rst_n $end
+$var reg 1 * valid $end
+$scope module dut $end
+$var wire 6 + A [5:0] $end
+$var wire 4 , B [3:0] $end
+$var wire 6 - Q [5:0] $end
+$var wire 4 . R [3:0] $end
+$var wire 1 ( clk $end
+$var wire 1 ! done $end
+$var wire 1 ) rst_n $end
+$var wire 1 * valid $end
+$var parameter 32 / NA $end
+$var parameter 32 0 NB $end
+$scope begin gen_fila[0] $end
+$var wire 6 1 q_prev [5:0] $end
+$var wire 4 2 r_prev [3:0] $end
+$var wire 6 3 sub [5:0] $end
+$var wire 5 4 r_ext [4:0] $end
+$var wire 1 5 q_bit $end
+$var parameter 2 6 k $end
+$scope begin g_entrada_primera $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[1] $end
+$var wire 4 7 r_prev [3:0] $end
+$var wire 6 8 sub [5:0] $end
+$var wire 5 9 r_ext [4:0] $end
+$var wire 6 : q_prev [5:0] $end
+$var wire 1 ; q_bit $end
+$var parameter 2 < k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[2] $end
+$var wire 4 = r_prev [3:0] $end
+$var wire 6 > sub [5:0] $end
+$var wire 5 ? r_ext [4:0] $end
+$var wire 6 @ q_prev [5:0] $end
+$var wire 1 A q_bit $end
+$var parameter 3 B k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[3] $end
+$var wire 4 C r_prev [3:0] $end
+$var wire 6 D sub [5:0] $end
+$var wire 5 E r_ext [4:0] $end
+$var wire 6 F q_prev [5:0] $end
+$var wire 1 G q_bit $end
+$var parameter 3 H k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[4] $end
+$var wire 4 I r_prev [3:0] $end
+$var wire 6 J sub [5:0] $end
+$var wire 5 K r_ext [4:0] $end
+$var wire 6 L q_prev [5:0] $end
+$var wire 1 M q_bit $end
+$var parameter 4 N k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$scope begin gen_fila[5] $end
+$var wire 4 O r_prev [3:0] $end
+$var wire 6 P sub [5:0] $end
+$var wire 5 Q r_ext [4:0] $end
+$var wire 6 R q_prev [5:0] $end
+$var wire 1 S q_bit $end
+$var parameter 4 T k $end
+$scope begin g_entrada_resto $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 T
+b100 N
+b11 H
+b10 B
+b1 <
+b0 6
+b100 0
+b110 /
+b100 %
+b110 $
+$end
+#0
+$dumpvars
+1S
+b0 R
+b0 Q
+b100000 P
+b0 O
+1M
+b0 L
+b0 K
+b100000 J
+b0 I
+1G
+b0 F
+b0 E
+b100000 D
+b0 C
+1A
+b0 @
+b0 ?
+b100000 >
+b0 =
+1;
+b0 :
+b0 9
+b100000 8
+b0 7
+15
+b0 4
+b100000 3
+b0 2
+b0 1
+b0 .
+b0 -
+b0 ,
+b0 +
+0*
+0)
+0(
+b0 '
+b0 &
+b0 #
+b0 "
+0!
+$end
+#18518
+1(
+#37036
+0(
+#55554
+1(
+#74072
+0(
+#92590
+1(
+#100000
+1)
+#111108
+0(
+#129626
+05
+b11101 3
+b1 :
+b1 @
+b1 F
+b1 L
+b1 R
+b1 #
+b1 -
+1*
+b11 '
+b11 ,
+b1100 &
+b1100 +
+1(
+#148144
+0(
+#166662
+0;
+b11101 8
+b11 #
+b11 -
+b11 R
+b11 L
+b11 F
+b11 @
+b0 :
+0*
+1(
+#185180
+0(
+#203698
+0A
+b11110 >
+b1 ?
+b0 @
+b111 F
+b111 L
+b111 R
+b111 #
+b111 -
+1(
+#222216
+0(
+#240734
+b1111 #
+b1111 -
+b1111 R
+b1111 L
+b0 F
+b100000 D
+b11 E
+b1 C
+1(
+#259252
+0(
+#277770
+0M
+b11101 J
+b1 L
+b11111 R
+b11111 #
+b11111 -
+1(
+#296288
+0(
+#314806
+0S
+b11101 P
+b111111 #
+b111111 -
+b10 R
+1(
+#333324
+0(
+#351842
+1!
+b100 #
+b100 -
+1(
+#370360
+0(
+#388878
+0!
+1(
+#407396
+0(
+#425914
+1(
+#444432
+0(
+#462950
+1(
+#481468
+0(
+#499986
+1(
+#518504
+0(
+#537022
+b11100 3
+1*
+b100 '
+b100 ,
+b1111 &
+b1111 +
+1(
+#555540
+0(
+#574058
+b11100 8
+0*
+1(
+#592576
+0(
+#611094
+b11101 >
+1(
+#629612
+0(
+#648130
+0G
+b11111 D
+1(
+#666648
+0(
+#685166
+1M
+b0 L
+b100011 J
+b111 K
+b11 I
+1(
+#703684
+0(
+#722202
+1S
+b1 R
+b100011 P
+b111 Q
+b11 O
+1(
+#740720
+0(
+#759238
+1!
+b11 #
+b11 -
+b11 "
+b11 .
+1(
+#777756
+0(
+#796274
+0!
+1(
+#814792
+0(
+#833310
+1(
+#851828
+0(
+#870346
+1(
+#888864
+0(
+#907382
+1(
+#925900
+0(
+#944418
+1(
