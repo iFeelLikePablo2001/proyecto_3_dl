@@ -11,21 +11,20 @@
 //                                                  → seven_seg_decoder
 //                                                  → mux_display → an/seg
 //
-// Reset físico (pin 3): activo-alto (reset).
-// Módulos con rst_n activo-bajo reciben (~reset).
+// Reset físico (pin 3): activo-BAJO.
+//   - Sin presionar botón : pin = HIGH → sistema corriendo
+//   - Botón presionado    : pin = LOW  → reset activo
 //
-// IMPORTANTE: capturador_numero.sv debe estar modificado para aceptar:
-//   - Parámetros MAX_DIGITOS y OUT_WIDTH
-//   - Puerto de entrada: borrar
-//   - Salida: numero_bin [OUT_WIDTH-1:0] en lugar de numero_bcd [9:0]
+// rst_n   = reset tal cual (activo-bajo para módulos que lo esperan así)
+// reset_i = ~reset         (activo-alto para módulos que esperan reset=1)
 
 module top (
     input  logic        clk,       // 27 MHz (pin 52)
-    input  logic        reset,     // reset activo-alto (pin 3)
+    input  logic        reset,     // reset físico activo-bajo (pin 3)
 
     // Teclado matricial 4×4
-    input  logic [3:0]  rows,      // filas (entradas, con pull-down en PCB)
-    output logic [3:0]  cols,      // columnas (salidas de escaneo)
+    input  logic [3:0]  rows,      // filas (entradas, pull-down interno)
+    output logic [3:0]  cols,      // columnas (salidas de escaneo, activo-alto)
 
     // Display de 7 segmentos (2 dígitos físicos)
     output logic [6:0]  seg,       // segmentos (activo-bajo en TangNano)
@@ -35,8 +34,16 @@ module top (
     // ─────────────────────────────────────────────────────────────────
     // 0. Señales internas
     // ─────────────────────────────────────────────────────────────────
+
+    // El pin físico de reset (pin 3) es activo-BAJO:
+    //   - Reposo (sin presionar botón): pin = HIGH  → no reset
+    //   - Botón presionado:             pin = LOW   → reset activo
+    // rst_n   = señal activo-bajo  para módulos que la esperan así  (= reset tal cual)
+    // reset_i = señal activo-alto para módulos que esperan reset=1  (= ~reset)
     logic rst_n;
-    assign rst_n = ~reset;         // activo-bajo para los módulos que lo usan
+    logic reset_i;
+    assign rst_n   = reset;   // pin es activo-bajo → HIGH en reposo = sin reset
+    assign reset_i = ~reset;  // activo-alto interno → HIGH cuando botón presionado
 
     // Señales de escaneo/refresco
     logic scan_enable;             // habilita un paso del escaneo del teclado
@@ -65,18 +72,14 @@ module top (
     // Salidas de los capturadores
     logic [5:0] dividendo;         // 6 bits, máx 63
     logic [3:0] divisor;           // 4 bits, máx 15
-    logic [9:0] dividendo_raw;     // salida cruda del capturador (10 bits BCD)
-    logic [9:0] divisor_raw;       // salida cruda del capturador (10 bits BCD)
+    logic [9:0] dividendo_raw;     // salida cruda del capturador (10 bits)
+    logic [9:0] divisor_raw;       // salida cruda del capturador (10 bits)
 
-    // Salidas del division_unit (cableadas directamente desde los registros del pipeline)
+    // Salidas del division_unit
     logic [5:0] cociente;
     logic [3:0] residuo;
 
-    // Latches de salida: capturan cociente y residuo cuando done=1 y los mantienen
-    // estables hasta la próxima operación.
-    // NECESARIO con el pipeline: tras done, los registros q_p[NA]/r_p[NA] se
-    // sobreescriben en el siguiente ciclo con la burbuja inválida que sigue al dato.
-    // Sin estos latches el display mostraría basura a partir del segundo ciclo.
+    // Latches de salida: capturan cociente y residuo cuando done=1
     logic [5:0] cociente_r;
     logic [3:0] residuo_r;
 
@@ -90,6 +93,11 @@ module top (
     logic [7:0] bcd_sel;           // BCD seleccionado (cociente o residuo)
     logic [3:0] digit;             // dígito BCD a mostrar en esta ranura
 
+    // Columnas del teclado: keypad_reader genera patrón activo-bajo (una col en 0,
+    // el resto en 1). Para que las filas (con pull-down interno) suban al detectar
+    // una tecla, se necesita señal activo-alto en el pin físico → invertir.
+    logic [3:0] cols_raw;          // salida interna de keypad_reader (activo-bajo)
+
     // ─────────────────────────────────────────────────────────────────
     // 1. Generadores de habilitar (clock enables)
     // ─────────────────────────────────────────────────────────────────
@@ -97,13 +105,13 @@ module top (
     // display_enable ≈ 2 kHz → avanza entre los 2 displays físicos
     clock_enable #(.MAX_COUNT(27_000)) u_scan_ce (
         .clk   (clk),
-        .reset (reset),
+        .reset (reset_i),
         .enable(scan_enable)
     );
 
     clock_enable #(.MAX_COUNT(13_500)) u_disp_ce (
         .clk   (clk),
-        .reset (reset),
+        .reset (reset_i),
         .enable(display_enable)
     );
 
@@ -122,7 +130,7 @@ module top (
             // Anti-rebote (~37 µs a 27 MHz con LIMIT=1000)
             debounce #(.LIMIT(1000)) u_deb (
                 .clk      (clk),
-                .reset    (reset),
+                .reset    (reset_i),
                 .noisy_in (rows_sync[i]),
                 .clean_out(rows_clean[i])
             );
@@ -134,14 +142,17 @@ module top (
     // ─────────────────────────────────────────────────────────────────
     keypad_reader u_keypad (
         .clk        (clk),
-        .reset      (reset),
+        .reset      (reset_i),
         .scan_enable(scan_enable),
         .rows       (rows_clean),
-        .cols       (cols),
+        .cols       (cols_raw),     // patrón activo-bajo interno
         .row_detect (row_detect),
         .col_detect (col_detect),
         .key_valid  (key_valid_raw)
     );
+    // Invertir: pin físico activo-alto → columna activa en HIGH
+    // tecla presionada conecta fila con columna HIGH → fila sube → detectado
+    assign cols = ~cols_raw;
 
     // ─────────────────────────────────────────────────────────────────
     // 4. Decodificador de posición fila/columna → código de tecla
@@ -154,14 +165,9 @@ module top (
 
     // ─────────────────────────────────────────────────────────────────
     // 5. Detección de tecla nueva (one-shot por pulsación)
-    //
-    // key_valid_raw se dispara cada scan_enable mientras la tecla esté
-    // presionada. key_active se activa en el primer pulso y se limpia
-    // al soltar (rows_clean == 0). tecla_valida es alto solo en el
-    // primer ciclo de cada pulsación distinta.
     // ─────────────────────────────────────────────────────────────────
-    always_ff @(posedge clk or posedge reset) begin
-        if (reset)
+    always_ff @(posedge clk or posedge reset_i) begin
+        if (reset_i)
             key_active <= 1'b0;
         else if (rows_clean == 4'b0000)
             key_active <= 1'b0;    // tecla liberada: permitir siguiente pulsación
@@ -189,8 +195,6 @@ module top (
 
     // ─────────────────────────────────────────────────────────────────
     // 7. Capturadores de dígitos decimales
-    //    (requiere capturador_numero.sv modificado con MAX_DIGITOS,
-    //     OUT_WIDTH y puerto borrar)
     // ─────────────────────────────────────────────────────────────────
 
     // Dividendo A: máx 63 → 6 bits
@@ -238,11 +242,6 @@ module top (
 
     // ─────────────────────────────────────────────────────────────────
     // 9. Latch de salida del divisor
-    // Captura Q y R en el ciclo en que done=1 y los retiene estables.
-    // Timing: done=v_p[NA] es una salida registrada del pipeline; cociente
-    // y residuo son también registrados (q_p[NA], r_p[NA]). Todos se leen
-    // ANTES del flanco activo, por lo que el latch captura los valores
-    // correctos del mismo ciclo en que done=1 aparece.
     // ─────────────────────────────────────────────────────────────────
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -256,8 +255,6 @@ module top (
 
     // ─────────────────────────────────────────────────────────────────
     // 10. Conversores binario → BCD (para display)
-    // Usan cociente_r / residuo_r (latched, estables) — NO las salidas
-    // directas del pipeline que se sobreescriben tras done.
     // ─────────────────────────────────────────────────────────────────
     bin_to_bcd #(.BIN_W(6), .N_DIGITS(2)) u_bcd_q (
         .bin_in (cociente_r),
@@ -270,32 +267,29 @@ module top (
     );
 
     // ─────────────────────────────────────────────────────────────────
-    // 11. Multiplexor de display: avanza entre los 2 ánodos físicos
+    // 11. Multiplexor de display
     // ─────────────────────────────────────────────────────────────────
     mux_display u_mux (
         .clk           (clk),
-        .reset         (reset),
+        .reset         (reset_i),
         .display_enable(display_enable),
         .active_display(active_display)
     );
 
-    // Solo se usan los 2 displays físicos → usar bit 0 del contador
     assign disp_col = active_display[0];
 
     // ─────────────────────────────────────────────────────────────────
-    // 11. Selección de qué mostrar: cociente o residuo
-    //     sel_display = 0 → cociente, 1 → residuo
+    // 12. Selección cociente / residuo y decodificación de dígito
     // ─────────────────────────────────────────────────────────────────
     assign bcd_sel = sel_display ? bcd_residuo : bcd_cociente;
 
-    // bcd_sel[7:4] = dígito de decenas
-    // bcd_sel[3:0] = dígito de unidades
+    // bcd_sel[7:4] = decenas, bcd_sel[3:0] = unidades
     // disp_col=0 → display izquierdo (decenas)
     // disp_col=1 → display derecho  (unidades)
     assign digit = disp_col ? bcd_sel[3:0] : bcd_sel[7:4];
 
     // ─────────────────────────────────────────────────────────────────
-    // 12. Decodificador BCD → 7 segmentos
+    // 13. Decodificador BCD → 7 segmentos
     // ─────────────────────────────────────────────────────────────────
     seven_seg_decoder u_seg (
         .number(digit),
@@ -303,11 +297,10 @@ module top (
     );
 
     // ─────────────────────────────────────────────────────────────────
-    // 13. Control de ánodos (activo-bajo: 0 enciende el display)
-    //     Solo un display activo a la vez.
-    // ─────────────────────────────────────────────────────────────────
+    // 14. Control de ánodos (activo-bajo)
     // disp_col=0 → an = 2'b10 (activa an[0], display izquierdo)
     // disp_col=1 → an = 2'b01 (activa an[1], display derecho)
+    // ─────────────────────────────────────────────────────────────────
     assign an = disp_col ? 2'b01 : 2'b10;
 
 endmodule

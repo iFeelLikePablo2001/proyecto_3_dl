@@ -1,126 +1,20 @@
-// ============================================================
-//  Tang Nano 9K  –  Restricciones de pines (Pin Constraints)
-//  Proyecto 3 EL-3307: División de Enteros
-//  FPGA: GW1NR-9C  Paquete: QFN88  Herramienta: Gowin EDA
-//
-//  Renombrar a "top.cst" antes de usar en el proyecto Gowin.
-// ============================================================
-//
-//  ESTRUCTURA DE BANCOS DE E/S (GW1NR-9C, Tang Nano 9K):
-//  ┌─────────┬──────────┬────────────┬───────────────────────┐
-//  │  Banco  │  VCCIO   │ IO_TYPE    │  Pines aprox. (lógicos)│
-//  ├─────────┼──────────┼────────────┼───────────────────────┤
-//  │ Bank 0  │  3.3 V   │ LVCMOS33   │  1 – 13               │
-//  │ Bank 1  │  3.3 V   │ LVCMOS33   │  14 – 57              │
-//  │ Bank 6  │  1.8 V   │ LVCMOS18   │  70 – 86              │
-//  │ Bank 7  │  3.3 V   │ LVCMOS33   │  (internos/especiales)│
-//  └─────────┴──────────┴────────────┴───────────────────────┘
-//
-//  PINES DEDICADOS / EVITADOS EN ESTE DISEÑO:
-//  ┌────────┬──────────────────┬───────────────────────────────┐
-//  │  Pin   │  Función         │  Estado                       │
-//  ├────────┼──────────────────┼───────────────────────────────┤
-//  │   4    │  DONE            │  NO usado en diseño usuario   │
-//  │   5    │  RECONFIG_N      │  NO usado en diseño usuario   │
-//  │  13    │  TMS  (JTAG)     │  NO usado – reservar siempre  │
-//  │  14    │  TCK  (JTAG)     │  NO usado – reservar siempre  │
-//  │  15    │  TDI  (JTAG)     │  NO usado – reservar siempre  │
-//  │  16    │  TDO  (JTAG)     │  NO usado – reservar siempre  │
-//  │  52    │  GCLK5A (CLK)    │  USADO como reloj del sistema │
-//  └────────┴──────────────────┴───────────────────────────────┘
-//
-//  CAMBIO CRÍTICO vs. P2  (rows[2] y rows[3]):
-//  El archivo top.cst del P2 asignaba rows[2] y rows[3] a los pines
-//  79 y 80 (Bank 6, 1.8 V) pero declaraba IO_TYPE=LVCMOS33.
-//  Esto genera dos problemas:
-//    1. La herramienta Gowin puede reportar error de banco.
-//    2. Las columnas activas manejan 3.3 V; al presionar una tecla
-//       esa tensión llega al pin de fila. Con Bank 6 (1.8 V) se
-//       aplica 3.3 V a una entrada de 1.8 V → RIESGO DE DAÑO AL FPGA.
-//  SOLUCIÓN: rows[2] y rows[3] se asignan a los pines 33 y 34
-//  (Bank 1, 3.3 V), que están físicamente en el header izquierdo de
-//  la Tang Nano 9K, junto a rows[0] (pin 29) y rows[1] (pin 30).
-//
-//  MAPA COMPLETO DE SEÑALES:
-//  ┌─────────────────┬──────┬────────┬──────────┬────────────┐
-//  │  Señal top.sv   │  Pin │  Banco │  VCCIO   │  IO_TYPE   │
-//  ├─────────────────┼──────┼────────┼──────────┼────────────┤
-//  │  clk            │  52  │ GCLK   │  3.3 V   │ LVCMOS33   │
-//  │  reset          │   3  │ Bank 0 │  3.3 V   │ LVCMOS18   │
-//  │  cols[0]        │  25  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  cols[1]        │  26  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  cols[2]        │  27  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  cols[3]        │  28  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  rows[0]        │  29  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  rows[1]        │  30  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  rows[2]  (NEW) │  33  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  rows[3]  (NEW) │  34  │ Bank 1 │  3.3 V   │ LVCMOS33   │
-//  │  an[0]          │  72  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  an[1]          │  73  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  seg[0]  (a)    │  81  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  seg[1]  (b)    │  82  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  seg[2]  (c)    │  83  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  seg[3]  (d)    │  84  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  seg[4]  (e)    │  85  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  seg[5]  (f)    │  70  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  │  seg[6]  (g)    │  71  │ Bank 6 │  1.8 V   │ LVCMOS18   │
-//  └─────────────────┴──────┴────────┴──────────┴────────────┘
-//
-//  NOTA SOBRE EL RESET:
-//  El botón S1 de la Tang Nano 9K conecta el pin a GND al ser presionado.
-//  La resistencia de pull-up interna (PULL_MODE=UP, ~50 kΩ) mantiene el
-//  pin en ALTO cuando el botón está suelto → reset = 1 (sistema en reset).
-//  Al presionar → reset = 0 (sistema en operación normal).
-//  El módulo top.sv trata 'reset' como activo-alto; en consecuencia el
-//  sistema arranca en reset y sale al presionar S1 por primera vez.
-//  Si se prefiere un reset por flanco, se puede agregar un FF de un solo
-//  pulso en top.sv.
-// ============================================================
-
-
-// ── 1. RELOJ DEL SISTEMA ────────────────────────────────────────────
-// Pin 52 = GCLK5A: entrada de reloj dedicada (27 MHz).
-// PULL_MODE=NONE: la señal viene del oscilador externo, no necesita pull.
-// Es el único pin que puede alimentar la red global de reloj sin pasar
-// por un BUFG adicional; NO usar este pin para señales de datos.
-
 IO_LOC  "clk" 52;
-IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE;
-
-
-// ── 2. RESET (Botón S1) ─────────────────────────────────────────────
-// Pin 3: GPIO en Bank 0 (3.3 V / 1.8 V según versión de board).
-// PULL_MODE=UP activa la resistencia interna (~50 kΩ) → pin HIGH en reposo.
-// Presionar S1 lleva el pin a GND → reset = 0 → sistema sale del reset.
-// IO_TYPE=LVCMOS18 coincide con la declaración original del P2; mantener.
+IO_PORT "clk" IO_TYPE=LVCMOS33;
 
 IO_LOC  "reset" 3;
 IO_PORT "reset" IO_TYPE=LVCMOS18 PULL_MODE=UP;
 
-
-// ── 3. TECLADO — COLUMNAS (salidas, Bank 1, 3.3 V) ─────────────────
-// El FPGA maneja las columnas: activa una columna a LOW (escaneo activo-bajo).
-// DRIVE=8 mA: suficiente para el escaneo del teclado pasivo 4×4.
-// PULL_MODE=NONE: el keypad_reader controla el nivel explícitamente.
-
 IO_LOC  "cols[0]" 25;
-IO_PORT "cols[0]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_PORT "cols[0]" DRIVE=8 IO_TYPE=LVCMOS33;
 
 IO_LOC  "cols[1]" 26;
-IO_PORT "cols[1]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_PORT "cols[1]" DRIVE=8 IO_TYPE=LVCMOS33;
 
 IO_LOC  "cols[2]" 27;
-IO_PORT "cols[2]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_PORT "cols[2]" DRIVE=8 IO_TYPE=LVCMOS33;
 
 IO_LOC  "cols[3]" 28;
-IO_PORT "cols[3]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
-
-
-// ── 4. TECLADO — FILAS (entradas, TODOS en Bank 1, 3.3 V) ──────────
-// PULL_MODE=DOWN: fila en BAJO cuando ninguna tecla está presionada.
-// Al presionar una tecla, la columna activa (LOW) se conecta a la fila.
-// TODOS los pines de fila deben estar en el mismo banco que las columnas
-// (Bank 1, 3.3 V) para evitar sobretensión en los pines de entrada.
+IO_PORT "cols[3]" DRIVE=8 IO_TYPE=LVCMOS33;
 
 IO_LOC  "rows[0]" 29;
 IO_PORT "rows[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
@@ -128,49 +22,35 @@ IO_PORT "rows[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
 IO_LOC  "rows[1]" 30;
 IO_PORT "rows[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
 
-// *** CAMBIADO vs P2: de pin 79 (Bank 6, 1.8 V) → pin 33 (Bank 1, 3.3 V) ***
-// Reconectar el cable de rows[2] del header derecho (pin 79)
-// al header izquierdo (pin 33) en la protoboard.
 IO_LOC  "rows[2]" 33;
 IO_PORT "rows[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
 
-// *** CAMBIADO vs P2: de pin 80 (Bank 6, 1.8 V) → pin 34 (Bank 1, 3.3 V) ***
-// Reconectar el cable de rows[3] del header derecho (pin 80)
-// al header izquierdo (pin 34) en la protoboard.
 IO_LOC  "rows[3]" 34;
 IO_PORT "rows[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
 
-
-// ── 5. DISPLAY 7 SEGMENTOS — ÁNODOS (Bank 6, 1.8 V) ────────────────
-// Conectados al display integrado de 6 dígitos de la Tang Nano 9K.
-// El diseño usa solo los 2 primeros dígitos (an[1:0]).
-// Lógica activo-bajo: an=0 enciende el dígito, an=1 lo apaga.
-// DRIVE=8 mA: suficiente para los transistores de manejo del display.
-
-// ── DISPLAY EXTERNO: Bank 1 (3.3 V) ──────────────────────────────
 IO_LOC  "an[0]" 35;
-IO_PORT "an[0]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_PORT "an[0]" DRIVE=8 IO_TYPE=LVCMOS33;
 
 IO_LOC  "an[1]" 36;
-IO_PORT "an[1]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_PORT "an[1]" DRIVE=8 IO_TYPE=LVCMOS33;
 
-IO_LOC  "seg[0]" 37;
-IO_PORT "seg[0]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[0]" 32;
+IO_PORT "seg[0]" DRIVE=8 IO_TYPE=LVCMOS33;
 
-IO_LOC  "seg[1]" 38;
-IO_PORT "seg[1]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[1]" 31;
+IO_PORT "seg[1]" DRIVE=8 IO_TYPE=LVCMOS33;
 
-IO_LOC  "seg[2]" 39;
-IO_PORT "seg[2]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[2]" 49;
+IO_PORT "seg[2]" DRIVE=8 IO_TYPE=LVCMOS33;
 
-IO_LOC  "seg[3]" 40;
-IO_PORT "seg[3]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[3]" 48;
+IO_PORT "seg[3]" DRIVE=8 IO_TYPE=LVCMOS33;
 
-IO_LOC  "seg[4]" 41;
-IO_PORT "seg[4]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[4]" 70;
+IO_PORT "seg[4]" DRIVE=8 IO_TYPE=LVCMOS33;
 
-IO_LOC  "seg[5]" 42;
-IO_PORT "seg[5]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[5]" 71;
+IO_PORT "seg[5]" DRIVE=8 IO_TYPE=LVCMOS33;
 
-IO_LOC  "seg[6]" 43;
-IO_PORT "seg[6]" IO_TYPE=LVCMOS33 DRIVE=8 PULL_MODE=NONE;
+IO_LOC  "seg[6]" 72;
+IO_PORT "seg[6]" DRIVE=8 IO_TYPE=LVCMOS33;
