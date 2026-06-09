@@ -32,7 +32,7 @@ Successfully finished Verilog frontend.
 2. Executing Verilog-2005 frontend: ../design/capturador_numero.sv
 Parsing SystemVerilog input from `../design/capturador_numero.sv' to AST representation.
 Generating RTLIL representation for module `\capturador_numero'.
-Warning: Replacing memory \digito with list of registers. See ../design/capturador_numero.sv:23
+Warning: Replacing memory \digito with list of registers. See ../design/capturador_numero.sv:25
 Successfully finished Verilog frontend.
 
 3. Executing Verilog-2005 frontend: ../design/clock_enable.sv
@@ -48,7 +48,7 @@ Successfully finished Verilog frontend.
 5. Executing Verilog-2005 frontend: ../design/division_array.sv
 Parsing SystemVerilog input from `../design/division_array.sv' to AST representation.
 Generating RTLIL representation for module `\division_array'.
-Warning: Replacing memory \R_partial with list of registers. See ../design/division_array.sv:18
+Warning: Replacing memory \R_partial with list of registers. See ../design/division_array.sv:19
 Successfully finished Verilog frontend.
 
 6. Executing Verilog-2005 frontend: ../design/division_cell.sv
@@ -59,11 +59,11 @@ Successfully finished Verilog frontend.
 7. Executing Verilog-2005 frontend: ../design/division_unit.sv
 Parsing SystemVerilog input from `../design/division_unit.sv' to AST representation.
 Generating RTLIL representation for module `\division_unit'.
-Warning: Replacing memory \q_p with list of registers. See ../design/division_unit.sv:66
-Warning: Replacing memory \r_p with list of registers. See ../design/division_unit.sv:65
-Warning: Replacing memory \v_p with list of registers. See ../design/division_unit.sv:27
-Warning: Replacing memory \b_p with list of registers. See ../design/division_unit.sv:26
-Warning: Replacing memory \a_p with list of registers. See ../design/division_unit.sv:25
+Warning: Replacing memory \q_p with list of registers. See ../design/division_unit.sv:68
+Warning: Replacing memory \r_p with list of registers. See ../design/division_unit.sv:67
+Warning: Replacing memory \v_p with list of registers. See ../design/division_unit.sv:29
+Warning: Replacing memory \b_p with list of registers. See ../design/division_unit.sv:28
+Warning: Replacing memory \a_p with list of registers. See ../design/division_unit.sv:27
 Successfully finished Verilog frontend.
 
 8. Executing Verilog-2005 frontend: ../design/fsm_teclado.sv
@@ -216,11 +216,11 @@ Parameter \NB = 4
 Parameter \NA = 6
 Parameter \NB = 4
 Generating RTLIL representation for module `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit'.
-Warning: Replacing memory \q_p with list of registers. See ../design/division_unit.sv:66
-Warning: Replacing memory \r_p with list of registers. See ../design/division_unit.sv:65
-Warning: Replacing memory \v_p with list of registers. See ../design/division_unit.sv:27
-Warning: Replacing memory \b_p with list of registers. See ../design/division_unit.sv:26
-Warning: Replacing memory \a_p with list of registers. See ../design/division_unit.sv:25
+Warning: Replacing memory \q_p with list of registers. See ../design/division_unit.sv:68
+Warning: Replacing memory \r_p with list of registers. See ../design/division_unit.sv:67
+Warning: Replacing memory \v_p with list of registers. See ../design/division_unit.sv:29
+Warning: Replacing memory \b_p with list of registers. See ../design/division_unit.sv:28
+Warning: Replacing memory \a_p with list of registers. See ../design/division_unit.sv:27
 Parameter \MAX_COUNT = 13500
 
 15.2.6. Executing AST frontend in derive mode using pre-parsed AST for module `\clock_enable'.
@@ -294,29 +294,29 @@ Marked 1 switch rules as full_case in process $proc$C:\Users\pablo\OneDrive\Desk
 Marked 1 switch rules as full_case in process $proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:250$336 in module DFFR.
 Marked 1 switch rules as full_case in process $proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:231$334 in module DFFSE.
 Marked 1 switch rules as full_case in process $proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:211$332 in module DFFS.
-Marked 1 switch rules as full_case in process $proc$../design/top.sv:173$140 in module top.
-Marked 2 switch rules as full_case in process $proc$../design/top.sv:110$136 in module top.
+Marked 1 switch rules as full_case in process $proc$../design/top.sv:175$140 in module top.
+Marked 2 switch rules as full_case in process $proc$../design/top.sv:112$136 in module top.
 Marked 1 switch rules as full_case in process $proc$../design/seven_seg_decoder.sv:0$131 in module seven_seg_decoder.
-Marked 1 switch rules as full_case in process $proc$../design/mux_display.sv:11$129 in module mux_display.
-Marked 2 switch rules as full_case in process $proc$../design/keypad_reader.sv:18$126 in module keypad_reader.
+Marked 1 switch rules as full_case in process $proc$../design/mux_display.sv:13$129 in module mux_display.
+Marked 2 switch rules as full_case in process $proc$../design/keypad_reader.sv:19$126 in module keypad_reader.
 Removed 1 dead cases from process $proc$../design/key_decoder.sv:0$125 in module key_decoder.
-Marked 1 switch rules as full_case in process $proc$../design/fsm_teclado.sv:74$120 in module fsm_teclado.
+Marked 1 switch rules as full_case in process $proc$../design/fsm_teclado.sv:76$120 in module fsm_teclado.
 Removed 1 dead cases from process $proc$../design/fsm_teclado.sv:0$109 in module fsm_teclado.
 Marked 7 switch rules as full_case in process $proc$../design/fsm_teclado.sv:0$109 in module fsm_teclado.
-Marked 1 switch rules as full_case in process $proc$../design/fsm_teclado.sv:35$107 in module fsm_teclado.
-Marked 1 switch rules as full_case in process $proc$../design/clock_enable.sv:14$513 in module $paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.
-Marked 1 switch rules as full_case in process $proc$../design/clock_enable.sv:14$510 in module $paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.
-Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:63$507 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
-Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:63$501 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
-Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:63$495 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
-Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:63$489 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
-Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:63$483 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
-Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:63$477 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
-Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:23$472 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
+Marked 1 switch rules as full_case in process $proc$../design/fsm_teclado.sv:37$107 in module fsm_teclado.
+Marked 1 switch rules as full_case in process $proc$../design/clock_enable.sv:15$513 in module $paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.
+Marked 1 switch rules as full_case in process $proc$../design/clock_enable.sv:15$510 in module $paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.
+Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:65$507 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
+Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:65$501 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
+Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:65$495 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
+Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:65$489 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
+Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:65$483 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
+Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:65$477 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
+Marked 1 switch rules as full_case in process $proc$../design/division_unit.sv:25$472 in module $paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.
 Marked 12 switch rules as full_case in process $proc$../design/bin_to_bcd.sv:0$440 in module $paramod$16c772ddfc4c2818634df299be94c96a4339eba7\bin_to_bcd.
 Marked 8 switch rules as full_case in process $proc$../design/bin_to_bcd.sv:0$418 in module $paramod$cbb30916b466abaad39d05101546b3ce89d7190e\bin_to_bcd.
-Marked 3 switch rules as full_case in process $proc$../design/capturador_numero.sv:19$37 in module capturador_numero.
-Marked 2 switch rules as full_case in process $proc$../design/debounce.sv:16$414 in module $paramod\debounce\LIMIT=s32'00000000000000000000001111101000.
+Marked 3 switch rules as full_case in process $proc$../design/capturador_numero.sv:21$37 in module capturador_numero.
+Marked 2 switch rules as full_case in process $proc$../design/debounce.sv:17$414 in module $paramod\debounce\LIMIT=s32'00000000000000000000001111101000.
 Removed a total of 2 dead cases.
 
 15.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -374,23 +374,23 @@ Found async reset \CLEAR in `\DFFCE.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DI
 Found async reset \CLEAR in `\DFFC.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:328$344'.
 Found async reset \PRESET in `\DFFPE.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:309$342'.
 Found async reset \PRESET in `\DFFP.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:289$340'.
-Found async reset \rst_n in `\top.$proc$../design/top.sv:173$140'.
-Found async reset \reset_i in `\top.$proc$../design/top.sv:110$136'.
-Found async reset \reset in `\mux_display.$proc$../design/mux_display.sv:11$129'.
-Found async reset \reset in `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
-Found async reset \rst_n in `\fsm_teclado.$proc$../design/fsm_teclado.sv:74$120'.
-Found async reset \rst_n in `\fsm_teclado.$proc$../design/fsm_teclado.sv:35$107'.
-Found async reset \reset in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:14$513'.
-Found async reset \reset in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:14$510'.
-Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
-Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
-Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
-Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
-Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
-Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
-Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:23$472'.
-Found async reset \rst_n in `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
-Found async reset \reset in `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:16$414'.
+Found async reset \rst_n in `\top.$proc$../design/top.sv:175$140'.
+Found async reset \reset_i in `\top.$proc$../design/top.sv:112$136'.
+Found async reset \reset in `\mux_display.$proc$../design/mux_display.sv:13$129'.
+Found async reset \reset in `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
+Found async reset \rst_n in `\fsm_teclado.$proc$../design/fsm_teclado.sv:76$120'.
+Found async reset \rst_n in `\fsm_teclado.$proc$../design/fsm_teclado.sv:37$107'.
+Found async reset \reset in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:15$513'.
+Found async reset \reset in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:15$510'.
+Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
+Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
+Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
+Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
+Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
+Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
+Found async reset \rst_n in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:25$472'.
+Found async reset \rst_n in `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
+Found async reset \reset in `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:17$414'.
 
 15.3.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 2 switches.
@@ -456,17 +456,17 @@ Creating decoders for process `\DFFE.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\D
      1/1: $0\Q[0:0]
 Creating decoders for process `\DFF.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:0$329'.
 Creating decoders for process `\DFF.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:179$328'.
-Creating decoders for process `\top.$proc$../design/top.sv:173$140'.
+Creating decoders for process `\top.$proc$../design/top.sv:175$140'.
      1/2: $0\residuo_r[3:0]
      2/2: $0\cociente_r[5:0]
-Creating decoders for process `\top.$proc$../design/top.sv:110$136'.
+Creating decoders for process `\top.$proc$../design/top.sv:112$136'.
      1/1: $0\key_active[0:0]
-Creating decoders for process `\sync.$proc$../design/sync.sv:12$132'.
+Creating decoders for process `\sync.$proc$../design/sync.sv:13$132'.
 Creating decoders for process `\seven_seg_decoder.$proc$../design/seven_seg_decoder.sv:0$131'.
      1/1: $1\seg[6:0]
-Creating decoders for process `\mux_display.$proc$../design/mux_display.sv:11$129'.
+Creating decoders for process `\mux_display.$proc$../design/mux_display.sv:13$129'.
      1/1: $0\active_display[1:0]
-Creating decoders for process `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
+Creating decoders for process `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
      1/5: $0\key_valid[0:0]
      2/5: $0\current_col[1:0]
      3/5: $0\col_detect[1:0]
@@ -474,7 +474,7 @@ Creating decoders for process `\keypad_reader.$proc$../design/keypad_reader.sv:1
      5/5: $0\cols[3:0]
 Creating decoders for process `\key_decoder.$proc$../design/key_decoder.sv:0$125'.
      1/1: $1\keycode[3:0]
-Creating decoders for process `\fsm_teclado.$proc$../design/fsm_teclado.sv:74$120'.
+Creating decoders for process `\fsm_teclado.$proc$../design/fsm_teclado.sv:76$120'.
      1/1: $0\sel_display[0:0]
 Creating decoders for process `\fsm_teclado.$proc$../design/fsm_teclado.sv:0$109'.
      1/8: $8\next_state[1:0]
@@ -485,51 +485,51 @@ Creating decoders for process `\fsm_teclado.$proc$../design/fsm_teclado.sv:0$109
      6/8: $3\next_state[1:0]
      7/8: $2\next_state[1:0]
      8/8: $1\next_state[1:0]
-Creating decoders for process `\fsm_teclado.$proc$../design/fsm_teclado.sv:35$107'.
+Creating decoders for process `\fsm_teclado.$proc$../design/fsm_teclado.sv:37$107'.
      1/1: $0\state[1:0]
-Creating decoders for process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:14$513'.
+Creating decoders for process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:15$513'.
      1/2: $0\counter[15:0]
      2/2: $0\enable[0:0]
-Creating decoders for process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:14$510'.
+Creating decoders for process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:15$510'.
      1/2: $0\counter[14:0]
      2/2: $0\enable[0:0]
-Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
+Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
      1/5: $0\v_p[6][0:0]
      2/5: $0\b_p[6][3:0]
      3/5: $0\a_p[6][5:0]
      4/5: $0\q_p[6][5:0]
      5/5: $0\r_p[6][3:0]
-Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
+Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
      1/5: $0\v_p[5][0:0]
      2/5: $0\b_p[5][3:0]
      3/5: $0\a_p[5][5:0]
      4/5: $0\q_p[5][5:0]
      5/5: $0\r_p[5][3:0]
-Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
+Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
      1/5: $0\v_p[4][0:0]
      2/5: $0\b_p[4][3:0]
      3/5: $0\a_p[4][5:0]
      4/5: $0\q_p[4][5:0]
      5/5: $0\r_p[4][3:0]
-Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
+Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
      1/5: $0\v_p[3][0:0]
      2/5: $0\b_p[3][3:0]
      3/5: $0\a_p[3][5:0]
      4/5: $0\q_p[3][5:0]
      5/5: $0\r_p[3][3:0]
-Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
+Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
      1/5: $0\v_p[2][0:0]
      2/5: $0\b_p[2][3:0]
      3/5: $0\a_p[2][5:0]
      4/5: $0\q_p[2][5:0]
      5/5: $0\r_p[2][3:0]
-Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
+Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
      1/5: $0\v_p[1][0:0]
      2/5: $0\b_p[1][3:0]
      3/5: $0\a_p[1][5:0]
      4/5: $0\q_p[1][5:0]
      5/5: $0\r_p[1][3:0]
-Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:23$472'.
+Creating decoders for process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:25$472'.
      1/3: $0\v_p[0][0:0]
      2/3: $0\b_p[0][3:0]
      3/3: $0\a_p[0][5:0]
@@ -555,13 +555,13 @@ Creating decoders for process `$paramod$cbb30916b466abaad39d05101546b3ce89d7190e
      6/8: $3\scratch[7:4]
      7/8: $2\scratch[11:8]
      8/8: $1\scratch[7:4]
-Creating decoders for process `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
+Creating decoders for process `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
      1/5: $0\digito[2][3:0]
      2/5: $0\digito[1][3:0]
      3/5: $0\digito[0][3:0]
      4/5: $0\idx[1:0]
      5/5: $0\listo[0:0]
-Creating decoders for process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:16$414'.
+Creating decoders for process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:17$414'.
      1/3: $0\counter[10:0]
      2/3: $0\previous[0:0]
      3/3: $0\clean_out[0:0]
@@ -632,121 +632,121 @@ Creating register for signal `\DFFE.\Q' using process `\DFFE.$proc$C:\Users\pabl
   created $dff cell `$procdff$794' with positive edge clock.
 Creating register for signal `\DFF.\Q' using process `\DFF.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:179$328'.
   created $dff cell `$procdff$795' with positive edge clock.
-Creating register for signal `\top.\cociente_r' using process `\top.$proc$../design/top.sv:173$140'.
+Creating register for signal `\top.\cociente_r' using process `\top.$proc$../design/top.sv:175$140'.
   created $adff cell `$procdff$796' with positive edge clock and negative level reset.
-Creating register for signal `\top.\residuo_r' using process `\top.$proc$../design/top.sv:173$140'.
+Creating register for signal `\top.\residuo_r' using process `\top.$proc$../design/top.sv:175$140'.
   created $adff cell `$procdff$797' with positive edge clock and negative level reset.
-Creating register for signal `\top.\key_active' using process `\top.$proc$../design/top.sv:110$136'.
+Creating register for signal `\top.\key_active' using process `\top.$proc$../design/top.sv:112$136'.
   created $adff cell `$procdff$798' with positive edge clock and positive level reset.
-Creating register for signal `\sync.\ff1' using process `\sync.$proc$../design/sync.sv:12$132'.
+Creating register for signal `\sync.\ff1' using process `\sync.$proc$../design/sync.sv:13$132'.
   created $dff cell `$procdff$799' with positive edge clock.
-Creating register for signal `\sync.\ff2' using process `\sync.$proc$../design/sync.sv:12$132'.
+Creating register for signal `\sync.\ff2' using process `\sync.$proc$../design/sync.sv:13$132'.
   created $dff cell `$procdff$800' with positive edge clock.
-Creating register for signal `\mux_display.\active_display' using process `\mux_display.$proc$../design/mux_display.sv:11$129'.
+Creating register for signal `\mux_display.\active_display' using process `\mux_display.$proc$../design/mux_display.sv:13$129'.
   created $adff cell `$procdff$801' with positive edge clock and positive level reset.
-Creating register for signal `\keypad_reader.\cols' using process `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
+Creating register for signal `\keypad_reader.\cols' using process `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
   created $adff cell `$procdff$802' with positive edge clock and positive level reset.
-Creating register for signal `\keypad_reader.\row_detect' using process `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
+Creating register for signal `\keypad_reader.\row_detect' using process `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
   created $dff cell `$procdff$805' with positive edge clock.
-Creating register for signal `\keypad_reader.\col_detect' using process `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
+Creating register for signal `\keypad_reader.\col_detect' using process `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
   created $dff cell `$procdff$808' with positive edge clock.
-Creating register for signal `\keypad_reader.\key_valid' using process `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
+Creating register for signal `\keypad_reader.\key_valid' using process `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
   created $adff cell `$procdff$809' with positive edge clock and positive level reset.
-Creating register for signal `\keypad_reader.\current_col' using process `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
+Creating register for signal `\keypad_reader.\current_col' using process `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
   created $adff cell `$procdff$810' with positive edge clock and positive level reset.
-Creating register for signal `\fsm_teclado.\sel_display' using process `\fsm_teclado.$proc$../design/fsm_teclado.sv:74$120'.
+Creating register for signal `\fsm_teclado.\sel_display' using process `\fsm_teclado.$proc$../design/fsm_teclado.sv:76$120'.
   created $adff cell `$procdff$811' with positive edge clock and negative level reset.
-Creating register for signal `\fsm_teclado.\state' using process `\fsm_teclado.$proc$../design/fsm_teclado.sv:35$107'.
+Creating register for signal `\fsm_teclado.\state' using process `\fsm_teclado.$proc$../design/fsm_teclado.sv:37$107'.
   created $adff cell `$procdff$812' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.\enable' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:14$513'.
+Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.\enable' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:15$513'.
   created $adff cell `$procdff$813' with positive edge clock and positive level reset.
-Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.\counter' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:14$513'.
+Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.\counter' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:15$513'.
   created $adff cell `$procdff$814' with positive edge clock and positive level reset.
-Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.\enable' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:14$510'.
+Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.\enable' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:15$510'.
   created $adff cell `$procdff$815' with positive edge clock and positive level reset.
-Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.\counter' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:14$510'.
+Creating register for signal `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.\counter' using process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:15$510'.
   created $adff cell `$procdff$816' with positive edge clock and positive level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
   created $adff cell `$procdff$817' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
   created $adff cell `$procdff$818' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
   created $adff cell `$procdff$819' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
   created $adff cell `$procdff$820' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[6]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
   created $adff cell `$procdff$821' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
   created $adff cell `$procdff$822' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
   created $adff cell `$procdff$823' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
   created $adff cell `$procdff$824' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
   created $adff cell `$procdff$825' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[5]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
   created $adff cell `$procdff$826' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
   created $adff cell `$procdff$827' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
   created $adff cell `$procdff$828' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
   created $adff cell `$procdff$829' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
   created $adff cell `$procdff$830' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[4]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
   created $adff cell `$procdff$831' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
   created $adff cell `$procdff$832' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
   created $adff cell `$procdff$833' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
   created $adff cell `$procdff$834' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
   created $adff cell `$procdff$835' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[3]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
   created $adff cell `$procdff$836' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
   created $adff cell `$procdff$837' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
   created $adff cell `$procdff$838' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
   created $adff cell `$procdff$839' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
   created $adff cell `$procdff$840' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[2]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
   created $adff cell `$procdff$841' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
   created $adff cell `$procdff$842' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
   created $adff cell `$procdff$843' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
   created $adff cell `$procdff$844' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\r_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
   created $adff cell `$procdff$845' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\q_p[1]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
   created $adff cell `$procdff$846' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[0]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:23$472'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\a_p[0]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:25$472'.
   created $adff cell `$procdff$847' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[0]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:23$472'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\b_p[0]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:25$472'.
   created $adff cell `$procdff$848' with positive edge clock and negative level reset.
-Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[0]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:23$472'.
+Creating register for signal `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.\v_p[0]' using process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:25$472'.
   created $adff cell `$procdff$849' with positive edge clock and negative level reset.
-Creating register for signal `\capturador_numero.\listo' using process `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
+Creating register for signal `\capturador_numero.\listo' using process `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
   created $adff cell `$procdff$850' with positive edge clock and negative level reset.
-Creating register for signal `\capturador_numero.\idx' using process `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
+Creating register for signal `\capturador_numero.\idx' using process `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
   created $adff cell `$procdff$851' with positive edge clock and negative level reset.
-Creating register for signal `\capturador_numero.\digito[0]' using process `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
+Creating register for signal `\capturador_numero.\digito[0]' using process `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
   created $adff cell `$procdff$852' with positive edge clock and negative level reset.
-Creating register for signal `\capturador_numero.\digito[1]' using process `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
+Creating register for signal `\capturador_numero.\digito[1]' using process `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
   created $adff cell `$procdff$853' with positive edge clock and negative level reset.
-Creating register for signal `\capturador_numero.\digito[2]' using process `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
+Creating register for signal `\capturador_numero.\digito[2]' using process `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
   created $adff cell `$procdff$854' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.\counter' using process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:16$414'.
+Creating register for signal `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.\counter' using process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:17$414'.
   created $adff cell `$procdff$855' with positive edge clock and positive level reset.
-Creating register for signal `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.\clean_out' using process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:16$414'.
+Creating register for signal `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.\clean_out' using process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:17$414'.
   created $adff cell `$procdff$856' with positive edge clock and positive level reset.
-Creating register for signal `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.\previous' using process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:16$414'.
+Creating register for signal `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.\previous' using process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:17$414'.
   created $adff cell `$procdff$857' with positive edge clock and positive level reset.
 
 15.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
@@ -807,44 +807,44 @@ Found and cleaned up 1 empty switch in `\DFFE.$proc$C:\Users\pablo\OneDrive\Desk
 Removing empty process `DFFE.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:194$330'.
 Removing empty process `DFF.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:0$329'.
 Removing empty process `DFF.$proc$C:\Users\pablo\OneDrive\Desktop\TEC\DISENO~1\OSS-CA~1\bin\../share/yosys/gowin/cells_sim.v:179$328'.
-Found and cleaned up 1 empty switch in `\top.$proc$../design/top.sv:173$140'.
-Removing empty process `top.$proc$../design/top.sv:173$140'.
-Found and cleaned up 2 empty switches in `\top.$proc$../design/top.sv:110$136'.
-Removing empty process `top.$proc$../design/top.sv:110$136'.
-Removing empty process `sync.$proc$../design/sync.sv:12$132'.
+Found and cleaned up 1 empty switch in `\top.$proc$../design/top.sv:175$140'.
+Removing empty process `top.$proc$../design/top.sv:175$140'.
+Found and cleaned up 2 empty switches in `\top.$proc$../design/top.sv:112$136'.
+Removing empty process `top.$proc$../design/top.sv:112$136'.
+Removing empty process `sync.$proc$../design/sync.sv:13$132'.
 Found and cleaned up 1 empty switch in `\seven_seg_decoder.$proc$../design/seven_seg_decoder.sv:0$131'.
 Removing empty process `seven_seg_decoder.$proc$../design/seven_seg_decoder.sv:0$131'.
-Found and cleaned up 1 empty switch in `\mux_display.$proc$../design/mux_display.sv:11$129'.
-Removing empty process `mux_display.$proc$../design/mux_display.sv:11$129'.
-Found and cleaned up 4 empty switches in `\keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
-Removing empty process `keypad_reader.$proc$../design/keypad_reader.sv:18$126'.
+Found and cleaned up 1 empty switch in `\mux_display.$proc$../design/mux_display.sv:13$129'.
+Removing empty process `mux_display.$proc$../design/mux_display.sv:13$129'.
+Found and cleaned up 4 empty switches in `\keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
+Removing empty process `keypad_reader.$proc$../design/keypad_reader.sv:19$126'.
 Found and cleaned up 1 empty switch in `\key_decoder.$proc$../design/key_decoder.sv:0$125'.
 Removing empty process `key_decoder.$proc$../design/key_decoder.sv:0$125'.
-Found and cleaned up 1 empty switch in `\fsm_teclado.$proc$../design/fsm_teclado.sv:74$120'.
-Removing empty process `fsm_teclado.$proc$../design/fsm_teclado.sv:74$120'.
+Found and cleaned up 1 empty switch in `\fsm_teclado.$proc$../design/fsm_teclado.sv:76$120'.
+Removing empty process `fsm_teclado.$proc$../design/fsm_teclado.sv:76$120'.
 Found and cleaned up 8 empty switches in `\fsm_teclado.$proc$../design/fsm_teclado.sv:0$109'.
 Removing empty process `fsm_teclado.$proc$../design/fsm_teclado.sv:0$109'.
-Removing empty process `fsm_teclado.$proc$../design/fsm_teclado.sv:35$107'.
-Found and cleaned up 1 empty switch in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:14$513'.
-Removing empty process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:14$513'.
-Found and cleaned up 1 empty switch in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:14$510'.
-Removing empty process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:14$510'.
-Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$507'.
-Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$501'.
-Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$495'.
-Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$489'.
-Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$483'.
-Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:63$477'.
-Found and cleaned up 1 empty switch in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:23$472'.
-Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:23$472'.
+Removing empty process `fsm_teclado.$proc$../design/fsm_teclado.sv:37$107'.
+Found and cleaned up 1 empty switch in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:15$513'.
+Removing empty process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000110100101111000.$proc$../design/clock_enable.sv:15$513'.
+Found and cleaned up 1 empty switch in `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:15$510'.
+Removing empty process `$paramod\clock_enable\MAX_COUNT=s32'00000000000000000011010010111100.$proc$../design/clock_enable.sv:15$510'.
+Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$507'.
+Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$501'.
+Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$495'.
+Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$489'.
+Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$483'.
+Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:65$477'.
+Found and cleaned up 1 empty switch in `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:25$472'.
+Removing empty process `$paramod$4de5660fb004a0e0fdd21e2552efe768866cb753\division_unit.$proc$../design/division_unit.sv:25$472'.
 Found and cleaned up 12 empty switches in `$paramod$16c772ddfc4c2818634df299be94c96a4339eba7\bin_to_bcd.$proc$../design/bin_to_bcd.sv:0$440'.
 Removing empty process `$paramod$16c772ddfc4c2818634df299be94c96a4339eba7\bin_to_bcd.$proc$../design/bin_to_bcd.sv:0$440'.
 Found and cleaned up 8 empty switches in `$paramod$cbb30916b466abaad39d05101546b3ce89d7190e\bin_to_bcd.$proc$../design/bin_to_bcd.sv:0$418'.
 Removing empty process `$paramod$cbb30916b466abaad39d05101546b3ce89d7190e\bin_to_bcd.$proc$../design/bin_to_bcd.sv:0$418'.
-Found and cleaned up 3 empty switches in `\capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
-Removing empty process `capturador_numero.$proc$../design/capturador_numero.sv:19$37'.
-Found and cleaned up 2 empty switches in `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:16$414'.
-Removing empty process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:16$414'.
+Found and cleaned up 3 empty switches in `\capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
+Removing empty process `capturador_numero.$proc$../design/capturador_numero.sv:21$37'.
+Found and cleaned up 2 empty switches in `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:17$414'.
+Removing empty process `$paramod\debounce\LIMIT=s32'00000000000000000000001111101000.$proc$../design/debounce.sv:17$414'.
 Cleaned up 65 empty switches.
 
 15.3.12. Executing OPT_EXPR pass (perform const folding).
@@ -1199,13 +1199,13 @@ Removed a total of 0 cells.
 Adding EN signal on $procdff$798 ($adff) from module top (D = $0\key_active[0:0], Q = \key_active).
 Adding EN signal on $procdff$797 ($adff) from module top (D = \u_div.r_p[6], Q = \residuo_r).
 Adding EN signal on $procdff$796 ($adff) from module top (D = \u_div.q_p[6], Q = \cociente_r).
-Adding EN signal on $flatten\u_mux.$procdff$801 ($adff) from module top (D = $flatten\u_mux.$add$../design/mux_display.sv:17$130_Y [1:0], Q = \u_mux.active_display).
-Adding EN signal on $flatten\u_keypad.$procdff$810 ($adff) from module top (D = $flatten\u_keypad.$add$../design/keypad_reader.sv:31$127_Y [1:0], Q = \u_keypad.current_col).
+Adding EN signal on $flatten\u_mux.$procdff$801 ($adff) from module top (D = $flatten\u_mux.$add$../design/mux_display.sv:19$130_Y [1:0], Q = \u_mux.active_display).
+Adding EN signal on $flatten\u_keypad.$procdff$810 ($adff) from module top (D = $flatten\u_keypad.$add$../design/keypad_reader.sv:32$127_Y [1:0], Q = \u_keypad.current_col).
 Adding EN signal on $flatten\u_keypad.$procdff$808 ($dff) from module top (D = \u_keypad.current_col, Q = \u_keypad.col_detect).
 Adding EN signal on $flatten\u_keypad.$procdff$805 ($dff) from module top (D = $flatten\u_keypad.$procmux$590_Y, Q = \u_keypad.row_detect).
 Adding EN signal on $flatten\u_keypad.$procdff$802 ($adff) from module top (D = $flatten\u_keypad.$procmux$599_Y, Q = \u_keypad.cols).
 Adding EN signal on $flatten\u_fsm.$procdff$812 ($adff) from module top (D = \u_fsm.next_state, Q = \u_fsm.state).
-Adding EN signal on $flatten\u_fsm.$procdff$811 ($adff) from module top (D = $flatten\u_fsm.$not$../design/fsm_teclado.sv:78$124_Y, Q = \u_fsm.sel_display).
+Adding EN signal on $flatten\u_fsm.$procdff$811 ($adff) from module top (D = $flatten\u_fsm.$not$../design/fsm_teclado.sv:80$124_Y, Q = \u_fsm.sel_display).
 Adding EN signal on $flatten\u_div.$procdff$848 ($adff) from module top (D = \u_capB.numero_bcd [3:0], Q = \u_div.b_p[0]).
 Adding EN signal on $flatten\u_div.$procdff$847 ($adff) from module top (D = \u_capA.numero_bcd [5:0], Q = \u_div.a_p[0]).
 Adding EN signal on $flatten\u_capB.$procdff$854 ($adff) from module top (D = \u_capB.digito[1], Q = \u_capB.digito[2]).
@@ -1288,148 +1288,148 @@ Optimizing module top.
 15.7.8. Executing WREDUCE pass (reducing word size of cells).
 Removed top 28 address bits (of 32) from memory init port top.$flatten\u_decoder.$auto$mem.cc:319:emit$523 ($flatten\u_decoder.$auto$proc_rom.cc:150:do_switch$521).
 Removed top 28 address bits (of 32) from memory init port top.$flatten\u_seg.$auto$mem.cc:319:emit$519 ($flatten\u_seg.$auto$proc_rom.cc:150:do_switch$517).
-Removed top 1 bits (of 16) from port B of cell top.$flatten\u_scan_ce.$eq$../design/clock_enable.sv:23$515 ($eq).
-Removed top 1 bits (of 15) from port B of cell top.$flatten\u_disp_ce.$eq$../design/clock_enable.sv:23$512 ($eq).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\u_disp_ce.$add$../design/clock_enable.sv:21$511 ($add).
-Removed top 17 bits (of 32) from port Y of cell top.$flatten\u_disp_ce.$add$../design/clock_enable.sv:21$511 ($add).
-Removed top 1 bits (of 2) from port B of cell top.$sub$../design/top.sv:31$134 ($sub).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\u_scan_ce.$add$../design/clock_enable.sv:21$514 ($add).
-Removed top 16 bits (of 32) from port Y of cell top.$flatten\u_scan_ce.$add$../design/clock_enable.sv:21$514 ($add).
+Removed top 1 bits (of 16) from port B of cell top.$flatten\u_scan_ce.$eq$../design/clock_enable.sv:24$515 ($eq).
+Removed top 1 bits (of 15) from port B of cell top.$flatten\u_disp_ce.$eq$../design/clock_enable.sv:24$512 ($eq).
+Removed top 31 bits (of 32) from port B of cell top.$flatten\u_disp_ce.$add$../design/clock_enable.sv:22$511 ($add).
+Removed top 17 bits (of 32) from port Y of cell top.$flatten\u_disp_ce.$add$../design/clock_enable.sv:22$511 ($add).
+Removed top 1 bits (of 2) from port B of cell top.$sub$../design/top.sv:33$134 ($sub).
+Removed top 31 bits (of 32) from port B of cell top.$flatten\u_scan_ce.$add$../design/clock_enable.sv:22$514 ($add).
+Removed top 16 bits (of 32) from port Y of cell top.$flatten\u_scan_ce.$add$../design/clock_enable.sv:22$514 ($add).
 Removed top 1 bits (of 2) from port B of cell top.$flatten\u_keypad.$procmux$602_CMP0 ($eq).
 Removed top 3 bits (of 4) from port B of cell top.$flatten\u_keypad.$procmux$594_CMP0 ($eq).
 Removed top 2 bits (of 4) from port B of cell top.$flatten\u_keypad.$procmux$593_CMP0 ($eq).
 Removed top 1 bits (of 4) from port B of cell top.$flatten\u_keypad.$procmux$592_CMP0 ($eq).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\u_keypad.$add$../design/keypad_reader.sv:31$127 ($add).
-Removed top 30 bits (of 32) from port Y of cell top.$flatten\u_keypad.$add$../design/keypad_reader.sv:31$127 ($add).
+Removed top 31 bits (of 32) from port B of cell top.$flatten\u_keypad.$add$../design/keypad_reader.sv:32$127 ($add).
+Removed top 30 bits (of 32) from port Y of cell top.$flatten\u_keypad.$add$../design/keypad_reader.sv:32$127 ($add).
 Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$898 ($ne).
 Removed top 2 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$896 ($ne).
-Removed top 1 bits (of 2) from port B of cell top.$flatten\u_fsm.$eq$../design/fsm_teclado.sv:68$115 ($eq).
-Removed top 4 bits (of 10) from port Y of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:45$47 ($add).
-Removed top 4 bits (of 10) from port A of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:45$47 ($add).
-Removed top 4 bits (of 10) from port Y of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:45$46 ($add).
-Removed top 4 bits (of 10) from port A of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:45$46 ($add).
-Removed top 4 bits (of 10) from port B of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:45$46 ($add).
-Removed top 6 bits (of 9) from port B of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:46$45 ($mul).
-Removed top 4 bits (of 9) from port Y of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:46$45 ($mul).
-Removed top 3 bits (of 8) from port B of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:45$44 ($mul).
-Removed top 4 bits (of 8) from port Y of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:45$44 ($mul).
-Removed top 6 bits (of 10) from port Y of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:45$47 ($add).
-Removed top 6 bits (of 10) from port A of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:45$47 ($add).
-Removed top 6 bits (of 10) from port Y of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:45$46 ($add).
-Removed top 6 bits (of 10) from port A of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:45$46 ($add).
-Removed top 6 bits (of 10) from port B of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:45$46 ($add).
-Removed top 6 bits (of 9) from port B of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:46$45 ($mul).
-Removed top 6 bits (of 9) from port Y of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:46$45 ($mul).
-Removed top 3 bits (of 8) from port B of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:45$44 ($mul).
-Removed top 6 bits (of 8) from port Y of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:45$44 ($mul).
-Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$506 ($add).
-Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$505 ($add).
-Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$505 ($add).
-Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$500 ($add).
-Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$499 ($add).
-Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$499 ($add).
-Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$494 ($add).
-Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$493 ($add).
-Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$493 ($add).
-Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$488 ($add).
-Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$487 ($add).
-Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$487 ($add).
-Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$482 ($add).
-Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$481 ($add).
-Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$481 ($add).
-Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$476 ($add).
-Removed top 5 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$475 ($add).
-Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:58$475 ($add).
+Removed top 1 bits (of 2) from port B of cell top.$flatten\u_fsm.$eq$../design/fsm_teclado.sv:70$115 ($eq).
+Removed top 4 bits (of 10) from port Y of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:47$47 ($add).
+Removed top 4 bits (of 10) from port A of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:47$47 ($add).
+Removed top 4 bits (of 10) from port Y of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:47$46 ($add).
+Removed top 4 bits (of 10) from port A of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:47$46 ($add).
+Removed top 4 bits (of 10) from port B of cell top.$flatten\u_capA.$add$../design/capturador_numero.sv:47$46 ($add).
+Removed top 6 bits (of 9) from port B of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:48$45 ($mul).
+Removed top 4 bits (of 9) from port Y of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:48$45 ($mul).
+Removed top 3 bits (of 8) from port B of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:47$44 ($mul).
+Removed top 4 bits (of 8) from port Y of cell top.$flatten\u_capA.$mul$../design/capturador_numero.sv:47$44 ($mul).
+Removed top 6 bits (of 10) from port Y of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:47$47 ($add).
+Removed top 6 bits (of 10) from port A of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:47$47 ($add).
+Removed top 6 bits (of 10) from port Y of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:47$46 ($add).
+Removed top 6 bits (of 10) from port A of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:47$46 ($add).
+Removed top 6 bits (of 10) from port B of cell top.$flatten\u_capB.$add$../design/capturador_numero.sv:47$46 ($add).
+Removed top 6 bits (of 9) from port B of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:48$45 ($mul).
+Removed top 6 bits (of 9) from port Y of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:48$45 ($mul).
+Removed top 3 bits (of 8) from port B of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:47$44 ($mul).
+Removed top 6 bits (of 8) from port Y of cell top.$flatten\u_capB.$mul$../design/capturador_numero.sv:47$44 ($mul).
+Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$506 ($add).
+Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$505 ($add).
+Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$505 ($add).
+Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$500 ($add).
+Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$499 ($add).
+Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$499 ($add).
+Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$494 ($add).
+Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$493 ($add).
+Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$493 ($add).
+Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$488 ($add).
+Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$487 ($add).
+Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$487 ($add).
+Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$482 ($add).
+Removed top 1 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$481 ($add).
+Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$481 ($add).
+Removed top 5 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$476 ($add).
+Removed top 5 bits (of 6) from port A of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$475 ($add).
+Removed top 1 bits (of 6) from port B of cell top.$flatten\u_div.$add$../design/division_unit.sv:60$475 ($add).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_q.$procmux$689 ($mux).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_q.$procmux$683 ($mux).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$471 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$471 ($add).
-Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$471 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$470 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$469 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$468 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$467 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$467 ($add).
-Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$467 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$466 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$465 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$464 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$463 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$462 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$461 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$460 ($ge).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$459 ($add).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$459 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$459 ($add).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$458 ($ge).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$458 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$457 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$456 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$471 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$471 ($add).
+Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$471 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$470 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$469 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$468 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$467 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$467 ($add).
+Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$467 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$466 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$465 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$464 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$463 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$462 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$461 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$460 ($ge).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$459 ($add).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$459 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$459 ($add).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$458 ($ge).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$458 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$457 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$456 ($ge).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_q.$procmux$695 ($mux).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$453 ($add).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$453 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$453 ($add).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$452 ($ge).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$452 ($ge).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$453 ($add).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$453 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$453 ($add).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$452 ($ge).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$452 ($ge).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_q.$procmux$710 ($mux).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_q.$procmux$701 ($mux).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$438 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$437 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$436 ($ge).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$435 ($add).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$435 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$435 ($add).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$434 ($ge).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$434 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$433 ($add).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$432 ($ge).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$438 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$437 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$436 ($ge).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$435 ($add).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$435 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$435 ($add).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$434 ($ge).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$434 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$433 ($add).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$432 ($ge).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_r.$procmux$719 ($mux).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$429 ($add).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$429 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$429 ($add).
-Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$428 ($ge).
-Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$428 ($ge).
-Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$439 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$439 ($add).
-Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$439 ($add).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$429 ($add).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$429 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$429 ($add).
+Removed top 3 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$428 ($ge).
+Removed top 1 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$428 ($ge).
+Removed top 2 bits (of 4) from port B of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$439 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$439 ($add).
+Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$439 ($add).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_r.$procmux$734 ($mux).
 Removed top 1 bits (of 4) from mux cell top.$flatten\u_bcd_r.$procmux$725 ($mux).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\u_mux.$add$../design/mux_display.sv:17$130 ($add).
-Removed top 30 bits (of 32) from port Y of cell top.$flatten\u_mux.$add$../design/mux_display.sv:17$130 ($add).
-Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[0].u_deb.$eq$../design/debounce.sv:31$417 ($eq).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[1].u_deb.$eq$../design/debounce.sv:31$417 ($eq).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[2].u_deb.$eq$../design/debounce.sv:31$417 ($eq).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[3].u_deb.$eq$../design/debounce.sv:31$417 ($eq).
-Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:28$416 ($add).
-Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$463 ($add).
-Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$463 ($add).
-Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:28$416_Y.
-Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:28$416_Y.
-Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:28$416_Y.
-Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:28$416_Y.
+Removed top 31 bits (of 32) from port B of cell top.$flatten\u_mux.$add$../design/mux_display.sv:19$130 ($add).
+Removed top 30 bits (of 32) from port Y of cell top.$flatten\u_mux.$add$../design/mux_display.sv:19$130 ($add).
+Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[0].u_deb.$eq$../design/debounce.sv:32$417 ($eq).
+Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[1].u_deb.$eq$../design/debounce.sv:32$417 ($eq).
+Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[2].u_deb.$eq$../design/debounce.sv:32$417 ($eq).
+Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 1 bits (of 11) from port B of cell top.$flatten\gen_filas[3].u_deb.$eq$../design/debounce.sv:32$417 ($eq).
+Removed top 31 bits (of 32) from port B of cell top.$flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 21 bits (of 32) from port Y of cell top.$flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:29$416 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$463 ($add).
+Removed top 1 bits (of 4) from port A of cell top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$463 ($add).
+Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:29$416_Y.
+Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:29$416_Y.
+Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:29$416_Y.
+Removed top 21 bits (of 32) from wire top.$flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:29$416_Y.
 Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$10\scratch[13:10].
 Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$12\scratch[13:10].
 Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$8\scratch[13:10].
-Removed top 2 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$459_Y.
-Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$463_Y.
-Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$467_Y.
-Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$471_Y.
+Removed top 2 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$459_Y.
+Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$463_Y.
+Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$467_Y.
+Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$471_Y.
 Removed top 1 bits (of 4) from wire top.$flatten\u_bcd_r.$8\scratch[11:8].
-Removed top 4 bits (of 10) from wire top.$flatten\u_capA.$add$../design/capturador_numero.sv:45$46_Y.
-Removed top 4 bits (of 10) from wire top.$flatten\u_capA.$mul$../design/capturador_numero.sv:45$44_Y.
-Removed top 6 bits (of 10) from wire top.$flatten\u_capB.$add$../design/capturador_numero.sv:45$46_Y.
-Removed top 6 bits (of 10) from wire top.$flatten\u_capB.$mul$../design/capturador_numero.sv:45$44_Y.
-Removed top 17 bits (of 32) from wire top.$flatten\u_disp_ce.$add$../design/clock_enable.sv:21$511_Y.
-Removed top 30 bits (of 32) from wire top.$flatten\u_keypad.$add$../design/keypad_reader.sv:31$127_Y.
-Removed top 30 bits (of 32) from wire top.$flatten\u_mux.$add$../design/mux_display.sv:17$130_Y.
-Removed top 16 bits (of 32) from wire top.$flatten\u_scan_ce.$add$../design/clock_enable.sv:21$514_Y.
+Removed top 4 bits (of 10) from wire top.$flatten\u_capA.$add$../design/capturador_numero.sv:47$46_Y.
+Removed top 4 bits (of 10) from wire top.$flatten\u_capA.$mul$../design/capturador_numero.sv:47$44_Y.
+Removed top 6 bits (of 10) from wire top.$flatten\u_capB.$add$../design/capturador_numero.sv:47$46_Y.
+Removed top 6 bits (of 10) from wire top.$flatten\u_capB.$mul$../design/capturador_numero.sv:47$44_Y.
+Removed top 17 bits (of 32) from wire top.$flatten\u_disp_ce.$add$../design/clock_enable.sv:22$511_Y.
+Removed top 30 bits (of 32) from wire top.$flatten\u_keypad.$add$../design/keypad_reader.sv:32$127_Y.
+Removed top 30 bits (of 32) from wire top.$flatten\u_mux.$add$../design/mux_display.sv:19$130_Y.
+Removed top 16 bits (of 32) from wire top.$flatten\u_scan_ce.$add$../design/clock_enable.sv:22$514_Y.
 
 15.7.9. Executing PEEPOPT pass (run peephole optimizers).
 
@@ -1440,150 +1440,150 @@ Removed 0 unused cells and 22 unused wires.
 
 15.7.11. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module top:
-  creating $macc model for $flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:28$416 ($add).
-  creating $macc model for $flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:28$416 ($add).
-  creating $macc model for $flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:28$416 ($add).
-  creating $macc model for $flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:28$416 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$453 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$457 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$459 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$461 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$463 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$465 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$467 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$469 ($add).
-  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$471 ($add).
-  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$429 ($add).
-  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$433 ($add).
-  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$435 ($add).
-  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$437 ($add).
-  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$439 ($add).
-  creating $macc model for $flatten\u_capA.$add$../design/capturador_numero.sv:45$46 ($add).
-  creating $macc model for $flatten\u_capA.$add$../design/capturador_numero.sv:45$47 ($add).
-  creating $macc model for $flatten\u_capA.$mul$../design/capturador_numero.sv:45$44 ($mul).
-  creating $macc model for $flatten\u_capA.$mul$../design/capturador_numero.sv:46$45 ($mul).
-  creating $macc model for $flatten\u_capB.$add$../design/capturador_numero.sv:45$46 ($add).
-  creating $macc model for $flatten\u_capB.$add$../design/capturador_numero.sv:45$47 ($add).
-  creating $macc model for $flatten\u_capB.$mul$../design/capturador_numero.sv:45$44 ($mul).
-  creating $macc model for $flatten\u_capB.$mul$../design/capturador_numero.sv:46$45 ($mul).
-  creating $macc model for $flatten\u_disp_ce.$add$../design/clock_enable.sv:21$511 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$475 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$476 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$481 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$482 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$487 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$488 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$493 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$494 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$499 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$500 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$505 ($add).
-  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$506 ($add).
-  creating $macc model for $flatten\u_keypad.$add$../design/keypad_reader.sv:31$127 ($add).
-  creating $macc model for $flatten\u_mux.$add$../design/mux_display.sv:17$130 ($add).
-  creating $macc model for $flatten\u_scan_ce.$add$../design/clock_enable.sv:21$514 ($add).
-  creating $macc model for $sub$../design/top.sv:31$134 ($sub).
-  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$505 into $flatten\u_div.$add$../design/division_unit.sv:58$506.
-  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$499 into $flatten\u_div.$add$../design/division_unit.sv:58$500.
-  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$493 into $flatten\u_div.$add$../design/division_unit.sv:58$494.
-  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$487 into $flatten\u_div.$add$../design/division_unit.sv:58$488.
-  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$481 into $flatten\u_div.$add$../design/division_unit.sv:58$482.
-  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:58$475 into $flatten\u_div.$add$../design/division_unit.sv:58$476.
-  merging $macc model for $flatten\u_capB.$add$../design/capturador_numero.sv:45$46 into $flatten\u_capB.$add$../design/capturador_numero.sv:45$47.
-  merging $macc model for $flatten\u_capA.$add$../design/capturador_numero.sv:45$46 into $flatten\u_capA.$add$../design/capturador_numero.sv:45$47.
-  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:58$494.
-  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:58$500.
-  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:58$488.
-  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:58$506.
-  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:58$482.
-  creating $alu model for $macc $flatten\u_keypad.$add$../design/keypad_reader.sv:31$127.
-  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:58$476.
-  creating $alu model for $macc $flatten\u_mux.$add$../design/mux_display.sv:17$130.
-  creating $alu model for $macc $flatten\u_disp_ce.$add$../design/clock_enable.sv:21$511.
-  creating $alu model for $macc $flatten\u_scan_ce.$add$../design/clock_enable.sv:21$514.
-  creating $alu model for $macc $sub$../design/top.sv:31$134.
-  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$439.
-  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$437.
-  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$435.
-  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$433.
-  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$429.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$471.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$469.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$467.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$465.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$463.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$461.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$459.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$457.
-  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$453.
-  creating $alu model for $macc $flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:28$416.
-  creating $alu model for $macc $flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:28$416.
-  creating $alu model for $macc $flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:28$416.
-  creating $alu model for $macc $flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:28$416.
-  creating $macc cell for $flatten\u_capB.$add$../design/capturador_numero.sv:45$47: $auto$alumacc.cc:365:replace_macc$946
-  creating $macc cell for $flatten\u_capB.$mul$../design/capturador_numero.sv:45$44: $auto$alumacc.cc:365:replace_macc$947
-  creating $macc cell for $flatten\u_capB.$mul$../design/capturador_numero.sv:46$45: $auto$alumacc.cc:365:replace_macc$948
-  creating $macc cell for $flatten\u_capA.$mul$../design/capturador_numero.sv:45$44: $auto$alumacc.cc:365:replace_macc$949
-  creating $macc cell for $flatten\u_capA.$mul$../design/capturador_numero.sv:46$45: $auto$alumacc.cc:365:replace_macc$950
-  creating $macc cell for $flatten\u_capA.$add$../design/capturador_numero.sv:45$47: $auto$alumacc.cc:365:replace_macc$951
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$452 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$456 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$458 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$460 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$462 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$464 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$466 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$468 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$470 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$428 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$432 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$434 ($ge): merged with $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$458.
-  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$436 ($ge): new $alu
-  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$438 ($ge): new $alu
-  creating $alu model for $flatten\u_capA.$le$../design/capturador_numero.sv:27$40 ($le): new $alu
-  creating $alu cell for $flatten\u_capA.$le$../design/capturador_numero.sv:27$40: $auto$alumacc.cc:485:replace_alu$966
-  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$438: $auto$alumacc.cc:485:replace_alu$975
-  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$436: $auto$alumacc.cc:485:replace_alu$984
-  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$432: $auto$alumacc.cc:485:replace_alu$993
-  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$428: $auto$alumacc.cc:485:replace_alu$1002
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$470: $auto$alumacc.cc:485:replace_alu$1015
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$468: $auto$alumacc.cc:485:replace_alu$1024
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$466: $auto$alumacc.cc:485:replace_alu$1033
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$464: $auto$alumacc.cc:485:replace_alu$1042
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$462: $auto$alumacc.cc:485:replace_alu$1051
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$460: $auto$alumacc.cc:485:replace_alu$1060
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$458, $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:22$434: $auto$alumacc.cc:485:replace_alu$1069
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$456: $auto$alumacc.cc:485:replace_alu$1084
-  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:22$452: $auto$alumacc.cc:485:replace_alu$1093
-  creating $alu cell for $flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:28$416: $auto$alumacc.cc:485:replace_alu$1106
-  creating $alu cell for $flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:28$416: $auto$alumacc.cc:485:replace_alu$1109
-  creating $alu cell for $flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:28$416: $auto$alumacc.cc:485:replace_alu$1112
-  creating $alu cell for $flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:28$416: $auto$alumacc.cc:485:replace_alu$1115
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$453: $auto$alumacc.cc:485:replace_alu$1118
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$457: $auto$alumacc.cc:485:replace_alu$1121
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$461: $auto$alumacc.cc:485:replace_alu$1124
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$463: $auto$alumacc.cc:485:replace_alu$1127
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$465: $auto$alumacc.cc:485:replace_alu$1130
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$467: $auto$alumacc.cc:485:replace_alu$1133
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$469: $auto$alumacc.cc:485:replace_alu$1136
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$471: $auto$alumacc.cc:485:replace_alu$1139
-  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$429: $auto$alumacc.cc:485:replace_alu$1142
-  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$433: $auto$alumacc.cc:485:replace_alu$1145
-  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:24$459: $auto$alumacc.cc:485:replace_alu$1148
-  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$435: $auto$alumacc.cc:485:replace_alu$1151
-  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$437: $auto$alumacc.cc:485:replace_alu$1154
-  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:24$439: $auto$alumacc.cc:485:replace_alu$1157
-  creating $alu cell for $sub$../design/top.sv:31$134: $auto$alumacc.cc:485:replace_alu$1160
-  creating $alu cell for $flatten\u_scan_ce.$add$../design/clock_enable.sv:21$514: $auto$alumacc.cc:485:replace_alu$1163
-  creating $alu cell for $flatten\u_disp_ce.$add$../design/clock_enable.sv:21$511: $auto$alumacc.cc:485:replace_alu$1166
-  creating $alu cell for $flatten\u_mux.$add$../design/mux_display.sv:17$130: $auto$alumacc.cc:485:replace_alu$1169
-  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:58$476: $auto$alumacc.cc:485:replace_alu$1172
-  creating $alu cell for $flatten\u_keypad.$add$../design/keypad_reader.sv:31$127: $auto$alumacc.cc:485:replace_alu$1175
-  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:58$482: $auto$alumacc.cc:485:replace_alu$1178
-  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:58$506: $auto$alumacc.cc:485:replace_alu$1181
-  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:58$488: $auto$alumacc.cc:485:replace_alu$1184
-  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:58$500: $auto$alumacc.cc:485:replace_alu$1187
-  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:58$494: $auto$alumacc.cc:485:replace_alu$1190
+  creating $macc model for $flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:29$416 ($add).
+  creating $macc model for $flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:29$416 ($add).
+  creating $macc model for $flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:29$416 ($add).
+  creating $macc model for $flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:29$416 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$453 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$457 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$459 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$461 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$463 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$465 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$467 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$469 ($add).
+  creating $macc model for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$471 ($add).
+  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$429 ($add).
+  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$433 ($add).
+  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$435 ($add).
+  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$437 ($add).
+  creating $macc model for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$439 ($add).
+  creating $macc model for $flatten\u_capA.$add$../design/capturador_numero.sv:47$46 ($add).
+  creating $macc model for $flatten\u_capA.$add$../design/capturador_numero.sv:47$47 ($add).
+  creating $macc model for $flatten\u_capA.$mul$../design/capturador_numero.sv:47$44 ($mul).
+  creating $macc model for $flatten\u_capA.$mul$../design/capturador_numero.sv:48$45 ($mul).
+  creating $macc model for $flatten\u_capB.$add$../design/capturador_numero.sv:47$46 ($add).
+  creating $macc model for $flatten\u_capB.$add$../design/capturador_numero.sv:47$47 ($add).
+  creating $macc model for $flatten\u_capB.$mul$../design/capturador_numero.sv:47$44 ($mul).
+  creating $macc model for $flatten\u_capB.$mul$../design/capturador_numero.sv:48$45 ($mul).
+  creating $macc model for $flatten\u_disp_ce.$add$../design/clock_enable.sv:22$511 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$475 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$476 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$481 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$482 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$487 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$488 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$493 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$494 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$499 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$500 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$505 ($add).
+  creating $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$506 ($add).
+  creating $macc model for $flatten\u_keypad.$add$../design/keypad_reader.sv:32$127 ($add).
+  creating $macc model for $flatten\u_mux.$add$../design/mux_display.sv:19$130 ($add).
+  creating $macc model for $flatten\u_scan_ce.$add$../design/clock_enable.sv:22$514 ($add).
+  creating $macc model for $sub$../design/top.sv:33$134 ($sub).
+  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$505 into $flatten\u_div.$add$../design/division_unit.sv:60$506.
+  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$499 into $flatten\u_div.$add$../design/division_unit.sv:60$500.
+  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$493 into $flatten\u_div.$add$../design/division_unit.sv:60$494.
+  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$487 into $flatten\u_div.$add$../design/division_unit.sv:60$488.
+  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$481 into $flatten\u_div.$add$../design/division_unit.sv:60$482.
+  merging $macc model for $flatten\u_div.$add$../design/division_unit.sv:60$475 into $flatten\u_div.$add$../design/division_unit.sv:60$476.
+  merging $macc model for $flatten\u_capB.$add$../design/capturador_numero.sv:47$46 into $flatten\u_capB.$add$../design/capturador_numero.sv:47$47.
+  merging $macc model for $flatten\u_capA.$add$../design/capturador_numero.sv:47$46 into $flatten\u_capA.$add$../design/capturador_numero.sv:47$47.
+  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:60$494.
+  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:60$500.
+  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:60$488.
+  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:60$506.
+  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:60$482.
+  creating $alu model for $macc $flatten\u_keypad.$add$../design/keypad_reader.sv:32$127.
+  creating $alu model for $macc $flatten\u_div.$add$../design/division_unit.sv:60$476.
+  creating $alu model for $macc $flatten\u_mux.$add$../design/mux_display.sv:19$130.
+  creating $alu model for $macc $flatten\u_disp_ce.$add$../design/clock_enable.sv:22$511.
+  creating $alu model for $macc $flatten\u_scan_ce.$add$../design/clock_enable.sv:22$514.
+  creating $alu model for $macc $sub$../design/top.sv:33$134.
+  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$439.
+  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$437.
+  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$435.
+  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$433.
+  creating $alu model for $macc $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$429.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$471.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$469.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$467.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$465.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$463.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$461.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$459.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$457.
+  creating $alu model for $macc $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$453.
+  creating $alu model for $macc $flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:29$416.
+  creating $alu model for $macc $flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:29$416.
+  creating $alu model for $macc $flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:29$416.
+  creating $alu model for $macc $flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:29$416.
+  creating $macc cell for $flatten\u_capB.$add$../design/capturador_numero.sv:47$47: $auto$alumacc.cc:365:replace_macc$946
+  creating $macc cell for $flatten\u_capB.$mul$../design/capturador_numero.sv:47$44: $auto$alumacc.cc:365:replace_macc$947
+  creating $macc cell for $flatten\u_capB.$mul$../design/capturador_numero.sv:48$45: $auto$alumacc.cc:365:replace_macc$948
+  creating $macc cell for $flatten\u_capA.$mul$../design/capturador_numero.sv:47$44: $auto$alumacc.cc:365:replace_macc$949
+  creating $macc cell for $flatten\u_capA.$mul$../design/capturador_numero.sv:48$45: $auto$alumacc.cc:365:replace_macc$950
+  creating $macc cell for $flatten\u_capA.$add$../design/capturador_numero.sv:47$47: $auto$alumacc.cc:365:replace_macc$951
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$452 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$456 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$458 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$460 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$462 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$464 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$466 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$468 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$470 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$428 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$432 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$434 ($ge): merged with $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$458.
+  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$436 ($ge): new $alu
+  creating $alu model for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$438 ($ge): new $alu
+  creating $alu model for $flatten\u_capA.$le$../design/capturador_numero.sv:29$40 ($le): new $alu
+  creating $alu cell for $flatten\u_capA.$le$../design/capturador_numero.sv:29$40: $auto$alumacc.cc:485:replace_alu$966
+  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$438: $auto$alumacc.cc:485:replace_alu$975
+  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$436: $auto$alumacc.cc:485:replace_alu$984
+  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$432: $auto$alumacc.cc:485:replace_alu$993
+  creating $alu cell for $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$428: $auto$alumacc.cc:485:replace_alu$1002
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$470: $auto$alumacc.cc:485:replace_alu$1015
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$468: $auto$alumacc.cc:485:replace_alu$1024
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$466: $auto$alumacc.cc:485:replace_alu$1033
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$464: $auto$alumacc.cc:485:replace_alu$1042
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$462: $auto$alumacc.cc:485:replace_alu$1051
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$460: $auto$alumacc.cc:485:replace_alu$1060
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$458, $flatten\u_bcd_r.$ge$../design/bin_to_bcd.sv:23$434: $auto$alumacc.cc:485:replace_alu$1069
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$456: $auto$alumacc.cc:485:replace_alu$1084
+  creating $alu cell for $flatten\u_bcd_q.$ge$../design/bin_to_bcd.sv:23$452: $auto$alumacc.cc:485:replace_alu$1093
+  creating $alu cell for $flatten\gen_filas[0].u_deb.$add$../design/debounce.sv:29$416: $auto$alumacc.cc:485:replace_alu$1106
+  creating $alu cell for $flatten\gen_filas[1].u_deb.$add$../design/debounce.sv:29$416: $auto$alumacc.cc:485:replace_alu$1109
+  creating $alu cell for $flatten\gen_filas[2].u_deb.$add$../design/debounce.sv:29$416: $auto$alumacc.cc:485:replace_alu$1112
+  creating $alu cell for $flatten\gen_filas[3].u_deb.$add$../design/debounce.sv:29$416: $auto$alumacc.cc:485:replace_alu$1115
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$453: $auto$alumacc.cc:485:replace_alu$1118
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$457: $auto$alumacc.cc:485:replace_alu$1121
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$461: $auto$alumacc.cc:485:replace_alu$1124
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$463: $auto$alumacc.cc:485:replace_alu$1127
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$465: $auto$alumacc.cc:485:replace_alu$1130
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$467: $auto$alumacc.cc:485:replace_alu$1133
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$469: $auto$alumacc.cc:485:replace_alu$1136
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$471: $auto$alumacc.cc:485:replace_alu$1139
+  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$429: $auto$alumacc.cc:485:replace_alu$1142
+  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$433: $auto$alumacc.cc:485:replace_alu$1145
+  creating $alu cell for $flatten\u_bcd_q.$add$../design/bin_to_bcd.sv:25$459: $auto$alumacc.cc:485:replace_alu$1148
+  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$435: $auto$alumacc.cc:485:replace_alu$1151
+  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$437: $auto$alumacc.cc:485:replace_alu$1154
+  creating $alu cell for $flatten\u_bcd_r.$add$../design/bin_to_bcd.sv:25$439: $auto$alumacc.cc:485:replace_alu$1157
+  creating $alu cell for $sub$../design/top.sv:33$134: $auto$alumacc.cc:485:replace_alu$1160
+  creating $alu cell for $flatten\u_scan_ce.$add$../design/clock_enable.sv:22$514: $auto$alumacc.cc:485:replace_alu$1163
+  creating $alu cell for $flatten\u_disp_ce.$add$../design/clock_enable.sv:22$511: $auto$alumacc.cc:485:replace_alu$1166
+  creating $alu cell for $flatten\u_mux.$add$../design/mux_display.sv:19$130: $auto$alumacc.cc:485:replace_alu$1169
+  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:60$476: $auto$alumacc.cc:485:replace_alu$1172
+  creating $alu cell for $flatten\u_keypad.$add$../design/keypad_reader.sv:32$127: $auto$alumacc.cc:485:replace_alu$1175
+  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:60$482: $auto$alumacc.cc:485:replace_alu$1178
+  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:60$506: $auto$alumacc.cc:485:replace_alu$1181
+  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:60$488: $auto$alumacc.cc:485:replace_alu$1184
+  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:60$500: $auto$alumacc.cc:485:replace_alu$1187
+  creating $alu cell for $flatten\u_div.$add$../design/division_unit.sv:60$494: $auto$alumacc.cc:485:replace_alu$1190
   created 43 $alu and 6 $macc cells.
 
 15.7.12. Executing SHARE pass (SAT-based resource sharing).
@@ -1987,7 +1987,7 @@ Using template $paramod$3b7577489eb4433b1d5620cab7f3794743dee5ea\_80_gw1n_alu fo
 Using extmapper maccmap for cells of type $macc.
   add { $auto$wreduce.cc:455:run$941 [3:2] 2'00 } (4 bits, unsigned)
   add \u_capB.digito[0] (4 bits, unsigned)
-  add { $flatten\u_capB.$mul$../design/capturador_numero.sv:46$45_Y [3:1] 1'0 } (4 bits, unsigned)
+  add { $flatten\u_capB.$mul$../design/capturador_numero.sv:48$45_Y [3:1] 1'0 } (4 bits, unsigned)
 Using extmapper simplemap for cells of type $adffe.
 Using extmapper simplemap for cells of type $dffe.
 Using template $paramod$c2e415ef15bc3ccd2723772353a6b450d3d76206\_90_pmux for cells of type $pmux.
@@ -1999,7 +1999,7 @@ Using extmapper simplemap for cells of type $ne.
 Using extmapper simplemap for cells of type $logic_or.
   add { $auto$wreduce.cc:455:run$939 [5:2] 2'00 } (6 bits, unsigned)
   add \u_capA.digito[0] (4 bits, unsigned)
-  add { $flatten\u_capA.$mul$../design/capturador_numero.sv:46$45_Y [5:1] 1'0 } (6 bits, unsigned)
+  add { $flatten\u_capA.$mul$../design/capturador_numero.sv:48$45_Y [5:1] 1'0 } (6 bits, unsigned)
   add \u_capA.digito[1] * 3'101 (4x3 bits, unsigned)
   add 5'11001 * \u_capB.digito[2] (5x4 bits, unsigned)
   add 5'11001 * \u_capA.digito[2] (5x4 bits, unsigned)
@@ -2644,6 +2644,6 @@ Found and reported 0 problems.
 15.30. Executing JSON backend.
 
 Warnings: 7 unique messages, 12 total
-End of script. Logfile hash: 67d59d888a
+End of script. Logfile hash: 3f2374cf6f
 Yosys 0.26+1 (git sha1 b1a011138, x86_64-w64-mingw32-g++ 9.2.1 -Os)
 Time spent: 1% 26x opt_expr (0 sec), 1% 24x opt_clean (0 sec), ...
