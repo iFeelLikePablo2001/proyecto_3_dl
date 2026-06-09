@@ -1,7 +1,6 @@
 // debounce.sv
 // Filtro anti-rebote para entradas digitales ruidosas.
-// Compara la señal de entrada con su valor anterior y solo actualiza la salida
-// cuando el valor permanece estable durante LIMIT ciclos de reloj.
+
 module debounce #(
     parameter LIMIT = 5
 )(

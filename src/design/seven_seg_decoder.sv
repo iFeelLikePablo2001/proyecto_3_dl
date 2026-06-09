@@ -1,7 +1,6 @@
 // seven_seg_decoder.sv
 // Decodificador de número a segmentos de display de 7 segmentos.
-// Convierte un valor de 4 bits en la combinación de segmentos para mostrar
-// 0-9. Cualquier código fuera de rango apaga todos los segmentos.
+
 module seven_seg_decoder (
     input logic [3:0] number,
     output logic [6:0] seg

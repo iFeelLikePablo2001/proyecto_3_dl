@@ -1,5 +1,7 @@
 `timescale 1ns/1ps
 
+// tb_division_array.sv - Módulo tb_division_array
+
 module tb_division_array;
 
     localparam NA = 6;
@@ -26,27 +28,22 @@ module tb_division_array;
         $dumpfile("division_array.vcd");
         $dumpvars(0, tb_division_array);
 
-        // 12 / 3
         A = 12;
         B = 3;
         #10;
 
-        // 15 / 4
         A = 15;
         B = 4;
         #10;
 
-        // 63 / 7
         A = 63;
         B = 7;
         #10;
 
-        // 20 / 6
         A = 20;
         B = 6;
         #10;
 
-        // dividendo menor que divisor
         A = 5;
         B = 8;
         #10;

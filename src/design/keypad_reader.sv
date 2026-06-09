@@ -1,7 +1,6 @@
 // keypad_reader.sv
 // Lee un teclado matricial 4x4 mediante escaneo de columnas.
-// Cada ciclo habilita una columna distinta, busca la fila activa y cuando
-// detecta una tecla presionada produce un pulso key_valid con la fila/columna.
+
 module keypad_reader (
     input logic clk,
     input logic reset,

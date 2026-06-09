@@ -1,5 +1,7 @@
 `timescale 1ns/1ps
 
+// tb_clock_enable.sv - Módulo tb_clock_enable
+
 module tb_clock_enable;
 
 logic clk;

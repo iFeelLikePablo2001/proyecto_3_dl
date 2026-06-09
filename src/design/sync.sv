@@ -1,6 +1,6 @@
 // sync.sv
 // Sincronizador de señal asíncrona usando doble flip-flop.
-// Alinea async_in al dominio de reloj clk para reducir riesgos de metastabilidad.
+
 module sync (
     input logic clk,
     input logic async_in,

@@ -1,3 +1,5 @@
+// tb_debounce.sv - Módulo tb_debounce
+
 module tb_debounce;
 
 logic clk;
@@ -17,7 +19,7 @@ always #5 clk = ~clk;
 initial begin
     $dumpfile("tb_debounce.vcd");
     $dumpvars(0, tb_debounce);
-    
+
     clk = 0;
     reset = 1;
     noisy_in = 0;
@@ -25,7 +27,6 @@ initial begin
     #20;
     reset = 0;
 
-    // rebote
     #10 noisy_in = 1;
     #10 noisy_in = 0;
     #10 noisy_in = 1;

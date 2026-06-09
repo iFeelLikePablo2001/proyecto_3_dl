@@ -1,7 +1,5 @@
-// mux_display.sv
-// Generador del índice de display activo para multiplexar una pantalla de
-// cuatro dígitos. Cada vez que display_enable se activa, avanza al siguiente
-// dígito.
+// mux_display.sv - Multiplexor de display para mostrar valores en dos dígitos
+
 module mux_display (
     input logic clk,
     input logic reset,

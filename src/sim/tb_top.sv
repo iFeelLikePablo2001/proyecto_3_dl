@@ -1,19 +1,6 @@
 `timescale 1ns/1ps
-// ════════════════════════════════════════════════════════════════════════════
-//  tb_top.sv  –  Diagnóstico de lectura del teclado 4×4
-//
-//  Corre con:  make test
-//
-//  PARTE 1  Verifica key_decoder (lógica combinacional pura).
-//           Fuerza row_detect/col_detect directamente y lee keycode.
-//           → confirma que el software está bien.
-//
-//  PARTE 2  Verifica la cadena keypad_reader → key_decoder.
-//           Fuerza scan_enable y rows_clean (bypass debounce/sync).
-//           → confirma que el escáner de columnas funciona.
-//
-//  Al final imprime la tabla de referencia de cableado físico.
-// ════════════════════════════════════════════════════════════════════════════
+// tb_top.sv - Banco de pruebas del top con teclado y display
+
 module tb_top;
 
     logic clk;
@@ -32,10 +19,8 @@ module tb_top;
         .an   (an)
     );
 
-    // 27 MHz
     always #18.518 clk = ~clk;
 
-    // ── Nombre legible para cada keycode ─────────────────────────────────
     function automatic string kname(input logic [3:0] kc);
         case (kc)
             4'h0: return "'0'  digito";
@@ -58,7 +43,6 @@ module tb_top;
         endcase
     endfunction
 
-    // ── Keycode esperado según key_decoder ────────────────────────────────
     function automatic logic [3:0] kexpected(input int r, c);
         case ({r[1:0], c[1:0]})
             4'b0000: return 4'h1;   4'b0001: return 4'h2;
@@ -84,17 +68,11 @@ module tb_top;
         err1 = 0;
         err2 = 0;
 
-        // Reset activo-bajo: LOW = reset, HIGH = sistema corriendo
         reset = 0;
         #400;
         reset = 1;
         #400;
 
-        // ================================================================
-        //  PARTE 1 – key_decoder (lógica combinacional pura)
-        //  Fuerza row_detect y col_detect directamente.
-        //  No depende de timing ni del escáner.
-        // ================================================================
         $display("");
         $display("================================================================");
         $display("  PARTE 1: key_decoder  (fuerza row_detect / col_detect)");
@@ -109,7 +87,7 @@ module tb_top;
 
                 force dut.row_detect = r[1:0];
                 force dut.col_detect = c[1:0];
-                #5; // espera propagación combinacional
+                #5;
 
                 got = dut.keycode;
 
@@ -130,13 +108,6 @@ module tb_top;
         else
             $display("  >> PARTE 1 FALLO: %0d errores en key_decoder.", err1);
 
-        // ================================================================
-        //  PARTE 2 – Cadena completa keypad_reader → key_decoder
-        //  Fuerza scan_enable y rows_clean para evitar la espera
-        //  del debounce (1000 ciclos) y del clock_enable (27000 ciclos).
-        //  Verifica que keypad_reader registra row_detect y col_detect
-        //  correctamente antes de que key_decoder los decodifique.
-        // ================================================================
         $display("");
         $display("================================================================");
         $display("  PARTE 2: keypad_reader + key_decoder  (scan forzado)");
@@ -145,7 +116,6 @@ module tb_top;
         $display("  row | col | keycode |  Funcion                  |  Estado");
         $display("  ----|-----|---------|---------------------------|--------");
 
-        // Detener el scan_enable automático del clock_enable
         force dut.scan_enable = 1'b0;
 
         for (int r = 0; r < 4; r++) begin
@@ -153,28 +123,20 @@ module tb_top;
                 logic [3:0] exp, got;
                 exp = kexpected(r, c);
 
-                // ── Configurar estado del escáner ────────────────────────
-                // Poner current_col en la columna c para que col_detect = c
-                force dut.u_keypad.current_col = c[1:0];
+                force dut.u_keypad.current_col = c[1:0] + 2'd1;
 
-                // Activar la fila r en rows_clean (bypass debounce/sync)
                 force dut.rows_clean = (4'b0001 << r);
 
-                // Limpiar key_active para que tecla_valida pueda disparar
                 force dut.key_active = 1'b0;
 
-                @(posedge clk); // dejar que los forces se asienten
-
-                // ── Pulsar scan_enable por exactamente 1 ciclo ───────────
-                force dut.scan_enable = 1'b1;
-                @(posedge clk); // keypad_reader muestrea en este flanco
-                force dut.scan_enable = 1'b0;
-
-                // ── Esperar actualización de registros ───────────────────
-                // row_detect y col_detect se actualizan 1 clk después
                 @(posedge clk);
 
-                // ── Leer keycode (combinacional desde row/col_detect) ────
+                force dut.scan_enable = 1'b1;
+                @(posedge clk);
+                force dut.scan_enable = 1'b0;
+
+                @(posedge clk);
+
                 got = dut.keycode;
 
                 if (got !== exp) err2++;
@@ -183,7 +145,6 @@ module tb_top;
                     (got === exp) ? "OK" :
                     $sformatf("ERROR  (esperado 0x%0h)", exp));
 
-                // Soltar fila y esperar limpieza de key_active
                 force dut.rows_clean = 4'b0000;
                 @(posedge clk);
                 @(posedge clk);
@@ -201,13 +162,6 @@ module tb_top;
         else
             $display("  >> PARTE 2 FALLO: %0d errores. Revisar keypad_reader.sv.", err2);
 
-        // ================================================================
-        //  TABLA DE REFERENCIA DE CABLEADO FÍSICO
-        //  Si Parte 1 y Parte 2 aprueban pero el hardware falla →
-        //  el problema es de cableado físico. Use esta tabla para
-        //  verificar que cada cable conecta la tecla física correcta
-        //  al pin de fila/columna correcto del FPGA.
-        // ================================================================
         $display("");
         $display("================================================================");
         $display("  TABLA DE REFERENCIA  –  Cableado físico esperado");

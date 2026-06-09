@@ -1,5 +1,7 @@
 `timescale 1ns/1ps
 
+// tb_division_unit.sv - Módulo tb_division_unit
+
 module tb_division_unit;
 
     localparam NA = 6;
@@ -30,7 +32,6 @@ module tb_division_unit;
         .done(done)
     );
 
-    // 27 MHz
     always #18.518 clk = ~clk;
 
     initial begin
@@ -44,11 +45,9 @@ module tb_division_unit;
         A     = 0;
         B     = 0;
 
-        // reset
         #100;
         rst_n = 1;
 
-        // 12 / 3
         @(posedge clk);
         A = 12;
         B = 3;
@@ -57,10 +56,8 @@ module tb_division_unit;
         @(posedge clk);
         valid = 0;
 
-        // esperar salida
         repeat(10) @(posedge clk);
 
-        // 15 / 4
         A = 15;
         B = 4;
         valid = 1;

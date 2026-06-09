@@ -1,3 +1,5 @@
+// tb_keypad_reader.sv - Módulo tb_keypad_reader
+
 module tb_keypad_reader;
 
 logic clk;

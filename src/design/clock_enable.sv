@@ -1,8 +1,6 @@
 // clock_enable.sv
 // Generador de enable periódico: cuenta ciclos de reloj y produce un pulso
-// de salida cuando el contador alcanza MAX_COUNT-1.
-// Se usa para crear una señal de barrido o temporización más lenta a partir
-// del reloj principal.
+
 module clock_enable #(
     parameter MAX_COUNT = 10
 )(

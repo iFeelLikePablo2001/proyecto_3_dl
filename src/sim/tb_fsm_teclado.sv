@@ -1,5 +1,7 @@
 `timescale 1ns/1ps
 
+// tb_fsm_teclado.sv - Módulo tb_fsm_teclado
+
 module tb_fsm_teclado;
 
     logic clk;
@@ -28,7 +30,6 @@ module tb_fsm_teclado;
         .sel_display(sel_display)
     );
 
-    // Clock de 10 ns
     always #18.518 clk = ~clk;
 
     initial begin
@@ -42,11 +43,9 @@ module tb_fsm_teclado;
         tecla = 0;
         done = 0;
 
-        // Reset
         #20;
         rst_n = 1;
 
-        // Simular tecla A (separador)
         @(posedge clk);
         tecla = 4'hA;
         tecla_valida = 1;
@@ -54,7 +53,6 @@ module tb_fsm_teclado;
         @(posedge clk);
         tecla_valida = 0;
 
-        // Simular tecla B (ejecutar)
         @(posedge clk);
         tecla = 4'hB;
         tecla_valida = 1;
@@ -62,14 +60,12 @@ module tb_fsm_teclado;
         @(posedge clk);
         tecla_valida = 0;
 
-        // Simular fin de división
         #30;
         done = 1;
 
         @(posedge clk);
         done = 0;
 
-        // Toggle display
         @(posedge clk);
         tecla = 4'hD;
         tecla_valida = 1;
@@ -77,7 +73,6 @@ module tb_fsm_teclado;
         @(posedge clk);
         tecla_valida = 0;
 
-        // Borrar
         @(posedge clk);
         tecla = 4'hC;
         tecla_valida = 1;
