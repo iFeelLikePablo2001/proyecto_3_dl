@@ -36,6 +36,7 @@ module top (
 
     logic       key_active;
     logic       tecla_valida;
+    logic [2:0] no_key_scans;
 
     logic capturando_A, capturando_B;
     logic valid_div, borrar, sel_display;
@@ -58,9 +59,12 @@ module top (
     logic [7:0] bcd_divisor;
 
     logic [1:0] active_display;
-    logic       disp_col;
+    logic       display_blank;
+    logic       display_units;
+    logic       blank_tens;
     logic [7:0] bcd_sel;
     logic [3:0] digit;
+    logic [6:0] seg_digit;
 
     logic [3:0] cols_raw;
 
@@ -112,12 +116,18 @@ module top (
     );
 
     always_ff @(posedge clk or posedge reset_i) begin
-        if (reset_i)
+        if (reset_i) begin
             key_active <= 1'b0;
-        else if (rows_clean == 4'b0000)
-            key_active <= 1'b0;
-        else if (key_valid_raw)
+            no_key_scans <= 3'd0;
+        end else if (key_valid_raw) begin
             key_active <= 1'b1;
+            no_key_scans <= 3'd0;
+        end else if (scan_enable && key_active) begin
+            if (no_key_scans >= 3'd5)
+                key_active <= 1'b0;
+            else
+                no_key_scans <= no_key_scans + 3'd1;
+        end
     end
 
     assign tecla_valida = key_valid_raw && !key_active;
@@ -211,20 +221,27 @@ module top (
         .active_display(active_display)
     );
 
-    assign disp_col = active_display[0];
+    assign display_blank = ~active_display[0];
+    assign display_units = active_display[1];
 
     assign bcd_sel = capturando_A ? bcd_dividendo :
                      capturando_B ? bcd_divisor   :
                      sel_display  ? bcd_residuo   :
                                     bcd_cociente;
 
-    assign digit = disp_col ? bcd_sel[3:0] : bcd_sel[7:4];
+    assign blank_tens = !display_units && (bcd_sel[7:4] == 4'd0);
+
+    assign digit = display_units ? bcd_sel[3:0] : bcd_sel[7:4];
 
     seven_seg_decoder u_seg (
         .number(digit),
-        .seg   (seg)
+        .seg   (seg_digit)
     );
 
-    assign an = disp_col ? 2'b01 : 2'b10;
+    assign seg = (display_blank || blank_tens) ? 7'b1111111 : seg_digit;
+
+    assign an = (display_blank || blank_tens) ? 2'b11 :
+                display_units                 ? 2'b01 :
+                                                2'b10;
 
 endmodule

@@ -29,9 +29,9 @@ always_ff @(posedge clk or posedge reset) begin
 
         if (scan_enable) begin
 
-            current_col <= current_col + 1;
+            current_col <= current_col + 2'd1;
 
-            case(current_col)
+            case(current_col + 2'd1)
                 2'd0: cols <= 4'b1110;
                 2'd1: cols <= 4'b1101;
                 2'd2: cols <= 4'b1011;
