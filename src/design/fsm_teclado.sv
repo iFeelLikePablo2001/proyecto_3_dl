@@ -1,4 +1,6 @@
-// fsm_teclado.sv - Máquina de estados para captura de datos y control de división
+// fsm_teclado.sv - FSM para captura y control de la división
+// Usa registro de estado y lógica combinacional next-state/output para manejar ingreso de dígitos, comandos y validación.
+
 
 module fsm_teclado (
     input  logic        clk,

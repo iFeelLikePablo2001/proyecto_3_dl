@@ -1,5 +1,7 @@
-// top.sv
-// Módulo de nivel superior para el Proyecto 3: División de Enteros.
+// top.sv - Top-level del sistema de división entera
+// Interconecta teclado, captura, control y display.
+// Usa sincronizadores de doble FF para entradas asíncronas, debounce, FSM de registros y un divisor pipelínico.
+
 
 module top (
     input  logic        clk,

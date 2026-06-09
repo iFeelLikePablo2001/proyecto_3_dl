@@ -1,5 +1,6 @@
-// key_decoder.sv
-// Convierte la posición de fila/columna detectada en el valor de la tecla.
+// key_decoder.sv - Decodificador de fila/columna a código de tecla
+// Convierte la posición detectada en el teclado matricial a un código de tecla usando lógica combinacional.
+
 
 module key_decoder (
     input  logic [1:0] key_row,

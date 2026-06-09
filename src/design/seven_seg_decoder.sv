@@ -1,5 +1,6 @@
-// seven_seg_decoder.sv
-// Decodificador de número a segmentos de display de 7 segmentos.
+// seven_seg_decoder.sv - Decodificador combinacional BCD a 7 segmentos
+// Mapea 4 bits de entrada a segmentos de display con lógica combinacional (case statements).
+
 
 module seven_seg_decoder (
     input logic [3:0] number,

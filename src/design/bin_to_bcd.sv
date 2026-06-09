@@ -1,5 +1,6 @@
-// bin_to_bcd.sv
-// Conversor de número binario a representación BCD usando el algoritmo
+// bin_to_bcd.sv - Conversor combinacional de binario a BCD
+// Usa el algoritmo Double Dabble: ajusta cada dígito BCD con +3 cuando es >=5 y desplaza el registro.
+
 
 module bin_to_bcd #(
     parameter int BIN_W    = 6,

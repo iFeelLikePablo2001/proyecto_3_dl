@@ -1,4 +1,6 @@
-// capturador_numero.sv - Módulo capturador_numero
+// capturador_numero.sv - Capturador de dígitos decimales
+// Registra dígitos BCD entrantes en un shift register y construye el número completo tras tres dígitos.
+
 
 module capturador_numero (
     input  logic        clk,

@@ -1,4 +1,6 @@
-// mux_display.sv - Multiplexor de display para mostrar valores en dos dígitos
+// mux_display.sv - Multiplexor de display para mostrar dos dígitos
+// Implementa un contador de 2 bits que avanza con display_enable y selecciona el ánodo activo correspondiente.
+
 
 module mux_display (
     input logic clk,

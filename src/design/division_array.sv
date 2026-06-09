@@ -1,5 +1,6 @@
-// division_array.sv
-// Arreglo combinacional que implementa la división de enteros sin signo
+// division_array.sv - Arreglo combinacional de división entera
+// Constuye el divisor como un arreglo de celdas que calcula residuos parciales y bits de cociente en paralelo.
+
 
 module division_array #(
     parameter int NA = 6,

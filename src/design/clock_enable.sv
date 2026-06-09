@@ -1,5 +1,6 @@
-// clock_enable.sv
-// Generador de enable periódico: cuenta ciclos de reloj y produce un pulso
+// clock_enable.sv - Generador de habilitar periódico
+// Cuenta ciclos de reloj con un registro y produce un pulso de enable a baja frecuencia.
+
 
 module clock_enable #(
     parameter MAX_COUNT = 10

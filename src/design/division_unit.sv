@@ -1,4 +1,6 @@
 // division_unit.sv - Unidad de división entera pipelinizada
+// Implementa la división con un pipeline de NA etapas, cada etapa usando lógica combinacional y registros intermedios.
+
 
 module division_unit #(
     parameter int NA = 6,

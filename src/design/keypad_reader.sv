@@ -1,5 +1,6 @@
-// keypad_reader.sv
-// Lee un teclado matricial 4x4 mediante escaneo de columnas.
+// keypad_reader.sv - Lector de teclado matricial 4x4
+// Escanea columnas activas y detecta filas con lógica combinacional; produce índices de fila y columna.
+
 
 module keypad_reader (
     input logic clk,

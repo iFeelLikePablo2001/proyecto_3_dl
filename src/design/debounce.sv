@@ -1,5 +1,6 @@
-// debounce.sv
-// Filtro anti-rebote para entradas digitales ruidosas.
+// debounce.sv - Filtro anti-rebote para entradas digitales
+// Sincroniza la entrada con dos flip-flops y usa un contador de estabilidad para generar una salida limpia.
+
 
 module debounce #(
     parameter LIMIT = 5
