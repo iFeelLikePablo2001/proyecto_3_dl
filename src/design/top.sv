@@ -30,7 +30,7 @@ module top (
     logic       key_valid_raw;
 
     logic [1:0] col_detect;
-    assign col_detect = col_detect_raw - 2'd1;
+    assign col_detect = col_detect_raw;
 
     logic [3:0] keycode;
 
@@ -54,6 +54,8 @@ module top (
 
     logic [7:0] bcd_cociente;
     logic [7:0] bcd_residuo;
+    logic [7:0] bcd_dividendo;
+    logic [7:0] bcd_divisor;
 
     logic [1:0] active_display;
     logic       disp_col;
@@ -192,6 +194,16 @@ module top (
         .bcd_out(bcd_residuo)
     );
 
+    bin_to_bcd #(.BIN_W(6), .N_DIGITS(2)) u_bcd_a (
+        .bin_in (dividendo),
+        .bcd_out(bcd_dividendo)
+    );
+
+    bin_to_bcd #(.BIN_W(4), .N_DIGITS(2)) u_bcd_b (
+        .bin_in (divisor),
+        .bcd_out(bcd_divisor)
+    );
+
     mux_display u_mux (
         .clk           (clk),
         .reset         (reset_i),
@@ -201,7 +213,10 @@ module top (
 
     assign disp_col = active_display[0];
 
-    assign bcd_sel = sel_display ? bcd_residuo : bcd_cociente;
+    assign bcd_sel = capturando_A ? bcd_dividendo :
+                     capturando_B ? bcd_divisor   :
+                     sel_display  ? bcd_residuo   :
+                                    bcd_cociente;
 
     assign digit = disp_col ? bcd_sel[3:0] : bcd_sel[7:4];
 
