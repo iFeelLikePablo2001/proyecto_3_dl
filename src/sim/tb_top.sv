@@ -92,10 +92,12 @@ module tb_top;
                 got = dut.keycode;
 
                 if (got !== exp) err1++;
-                $display("   %0d  |  %0d  |   0x%0h   |  %-25s|  %s",
-                    r, c, got, kname(got),
-                    (got === exp) ? "OK" :
-                    $sformatf("ERROR  (esperado 0x%0h)", exp));
+                if (got === exp)
+                    $display("   %0d  |  %0d  |   0x%0h   |  %-25s|  OK",
+                        r, c, got, kname(got));
+                else
+                    $display("   %0d  |  %0d  |   0x%0h   |  %-25s|  ERROR (esperado 0x%0h)",
+                        r, c, got, kname(got), exp);
             end
         end
 
@@ -123,7 +125,7 @@ module tb_top;
                 logic [3:0] exp, got;
                 exp = kexpected(r, c);
 
-                force dut.u_keypad.current_col = c[1:0] + 2'd1;
+                force dut.u_keypad.current_col = c[1:0];
 
                 force dut.rows_clean = (4'b0001 << r);
 
@@ -140,10 +142,12 @@ module tb_top;
                 got = dut.keycode;
 
                 if (got !== exp) err2++;
-                $display("   %0d  |  %0d  |   0x%0h   |  %-25s|  %s",
-                    r, c, got, kname(got),
-                    (got === exp) ? "OK" :
-                    $sformatf("ERROR  (esperado 0x%0h)", exp));
+                if (got === exp)
+                    $display("   %0d  |  %0d  |   0x%0h   |  %-25s|  OK",
+                        r, c, got, kname(got));
+                else
+                    $display("   %0d  |  %0d  |   0x%0h   |  %-25s|  ERROR (esperado 0x%0h)",
+                        r, c, got, kname(got), exp);
 
                 force dut.rows_clean = 4'b0000;
                 @(posedge clk);
@@ -197,3 +201,4 @@ module tb_top;
     end
 
 endmodule
+

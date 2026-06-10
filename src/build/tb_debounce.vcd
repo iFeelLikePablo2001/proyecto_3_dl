@@ -1,0 +1,129 @@
+$date
+	Tue Jun 09 21:15:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_debounce $end
+$var wire 1 ! clean_out $end
+$var reg 1 " clk $end
+$var reg 1 # noisy_in $end
+$var reg 1 $ reset $end
+$scope module DUT $end
+$var wire 1 " clk $end
+$var wire 1 # noisy_in $end
+$var wire 1 $ reset $end
+$var parameter 32 % LIMIT $end
+$var reg 1 ! clean_out $end
+$var reg 3 & counter [2:0] $end
+$var reg 1 ' previous $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 %
+$end
+#0
+$dumpvars
+0'
+b0 &
+1$
+0#
+0"
+0!
+$end
+#5
+1"
+#10
+0"
+#15
+1"
+#20
+0"
+0$
+#25
+b1 &
+1"
+#30
+0"
+1#
+#35
+1'
+b0 &
+1"
+#40
+0"
+0#
+#45
+0'
+1"
+#50
+0"
+1#
+#55
+1'
+1"
+#60
+0"
+0#
+#65
+0'
+1"
+#70
+0"
+1#
+#75
+1'
+1"
+#80
+0"
+#85
+b1 &
+1"
+#90
+0"
+#95
+b10 &
+1"
+#100
+0"
+#105
+b11 &
+1"
+#110
+0"
+#115
+1!
+b100 &
+1"
+#120
+0"
+#125
+b101 &
+1"
+#130
+0"
+#135
+b110 &
+1"
+#140
+0"
+#145
+b111 &
+1"
+#150
+0"
+#155
+b0 &
+1"
+#160
+0"
+#165
+b1 &
+1"
+#170
+0"
